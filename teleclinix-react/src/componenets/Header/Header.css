@@ -1,0 +1,60 @@
+.navbar {
+    background-color: #CC9933 !important;
+}
+
+.logo {
+    height: 40px;
+}
+.form-control{
+    height: 40px;
+    background-color: #eed39c;
+    border: 2px solid #fff !important;
+    color: #000;
+    border-radius: 8px;
+}
+.form-control:focus{
+    background-color: #eed39c;
+    color: #000;
+    box-shadow: #eed39c;
+}
+.btn-search{
+    background-color: #eed39c;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    color: #000;
+}
+
+.btn-custom:hover {
+    background-color: #b38629;
+    border-color: #b38629;
+    color: #fff;
+}
+
+.contact{
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 150px;
+    align-items: center;
+    color: #000;
+}
+.contact:hover{
+    background-color: #b38629;
+    border-color: #b38629;
+    color: #fff;
+}
+.logb {
+    border-radius: 5px;
+    border-color: #000;
+    background-color: transparent;
+    border: 1px solid #fff;
+    align-items: center;
+    max-width: 120px;
+    color: #000;
+}
+.logb:hover{
+    background-color: #b38629;
+    border-color: #b38629;
+    color: #fff;
+    text-decoration: none;
+}
