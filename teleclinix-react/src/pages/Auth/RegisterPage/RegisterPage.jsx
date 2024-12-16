@@ -24,7 +24,7 @@ const RegisterPage = () => {
           minHeight: '100vh',
           transition: 'background-color 0.3s ease',
         }}
-      ></div>
+      >
       <div className="d-flex justify-content-between align-items-center">
         <h1 className="auth mt-5 p-3"></h1>
         <img src={teleclinixlogo} alt="TeleClinix logo" />
@@ -42,7 +42,7 @@ const RegisterPage = () => {
 
       <div className="d-flex flex-wrap align-items-center justify-content-center login-container">
         <div className="flex-1 ml-[60px] mt-[46px] items-center justify-center">
-        <Image src={Banner}
+        <img src='{}'
         alt='banner promoting TeleClinix services'
          width={1274} 
          height={854} />
@@ -61,13 +61,13 @@ const RegisterPage = () => {
         </p>
           <form className="mt-6" aria-label="Sign up form">
             <div className="mb-[30px]">
-              <Email label="Email Address" placeholder="" borderColor="#1F0066" />
+              <input label="Email Address" placeholder="Email Address" borderColor="#1F0066" />
             </div>
             <div className="mb-[12px]">
-              <PasswordInput label="Password" placeholder="" />
+              <input label="Password" placeholder="Password" />
             </div>
             <div className=''>
-                            <PasswordInput label="Confirm Password" placeholder="" />
+                            <input label="Confirm Password" placeholder="Confirm Password" />
                             <p className='mt-[20px]'>Password must be the same as above</p>        
                         </div>
             <div className="mt-6 flex justify-center align-middle">
@@ -91,7 +91,7 @@ const RegisterPage = () => {
                 aria-label="Sign up with Facebook"
               >
                 <div className="w-[50px] h-[50px] mr-[19px] bg-white rounded-full flex justify-center items-center">
-                  <Image src={FacebookIcon} alt="Facebook logo" width={32} height={32} />
+                  <img src='{} 'alt="Facebook logo" width={32} height={32} />
                 </div>
               </a>
               <a
@@ -101,7 +101,7 @@ const RegisterPage = () => {
                 aria-label="Sign up with Google"
               >
                 <div className="w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center">
-                  <Image src={Google} alt="Google logo" width={32} height={32} />
+                  <img src='{} ' alt="Google logo" width={32} height={32} />
                 </div>
               </a>
               <a
@@ -111,13 +111,14 @@ const RegisterPage = () => {
                 aria-label="Sign up with Apple"
               >
                 <div className="w-[50px] h-[50px] ml-[19px] bg-white rounded-full flex justify-center items-center">
-                  <Image src={Apple} alt="Apple logo" width={32} height={32} />
+                  <img src='{} ' alt="Apple logo" width={32} height={32} />
                 </div>
               </a>
             </div>
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

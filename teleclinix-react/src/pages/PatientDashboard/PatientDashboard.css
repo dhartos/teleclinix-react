@@ -1,0 +1,3 @@
+.dashboard, .top-leftdash, .row1, .booking, .patient-activity, .count, .activity{
+    display: flex;
+}
