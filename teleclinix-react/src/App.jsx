@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import './App.css'
 
+import SideBarPatient from './componenets/SideBarPatient/SideBarPatient';
 import LoginPage from './pages/Auth/LoginPage/LoginPage';
 import RegisterPage from './pages/Auth/RegisterPage/RegisterPage';
 import Header from './componenets/Header/Header';
@@ -17,7 +17,7 @@ function App() {
   {/* Authentication Routes */}
   {/* <Route path='/authentication/login' element={<LoginPage setLogin={setLogin} />} /> */}
   <Route path='/authentication/register' element={<RegisterPage />} />
-  <Route path='/patientdashboard' element={<PatientDashboard />}/>
+  <Route path='/' element={<PatientDashboard />}/>
   <Route path='/schedule-patient' element={<SchedulePatient />}/>
   </Routes>
   </Router>

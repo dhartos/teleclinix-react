@@ -1,42 +1,4 @@
-.main, .appointment-form, .radio-group, .form-actions{
-    display: flex;
-    gap: 10px;
-}
-.sidebar {
-    background-color: #1F0066;
-    color: #fff;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  .sidebar {
-    width: 250px; 
-    transition: width 0.3s ease;
-  }
-  
-  .sidebar.minimized {
-    width: 60px; 
-  }
-  
-  .sidebar.minimized .nav a {
-    display: none;
-  }
-  
-  .sidebar.minimized .logo,
-  .sidebar.minimized .user-info {
-    text-align: center;
-  }
-  
-  /* Example for icons-only view in minimized state */
-  .sidebar.minimized .nav a::before {
-    content: attr(data-icon);
-    display: block;
-    text-align: center;
-  }
-  
-  .logo {
+.logo {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 20px;
@@ -60,7 +22,6 @@
     text-decoration: none;
     margin: 10px 0;
     display: block;
-    padding: 10px;
     border-radius: 5px;
   }
   
@@ -79,20 +40,12 @@
     display: block;
     margin: 10px 0;
   }
-  
-  /* Main Content Styles */
-  .main {
-    width: 80%;
-    padding: 20px;
-  }
-  
   .appointment-header {
     margin-bottom: 20px;
   }
   
   .header-card {
     background-color: #eae6f2;
-    padding: 15px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -112,8 +65,7 @@
   /* Form Styles */
   .appointment-form {
     display: flex;
-    justify-content: space-between;
-    gap: 70px;
+
   }
   
   .form-group {
@@ -122,7 +74,6 @@
   
   input, select, button {
     width: 100%;
-    padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -131,7 +82,6 @@
   .date-options button,
   .time-options button {
     display: inline-block;
-    padding: 10px 15px;
     margin-right: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;

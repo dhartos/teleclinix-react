@@ -1,3 +1,108 @@
-.dashboard, .top-leftdash, .row1, .booking, .patient-activity, .count, .activity{
-    display: flex;
+body{
+    padding: 0;
+    background-color: #fff;
+    font-family: Plus Jakarta Sans;
+    overflow-x: hidden;
+    /* user-select: none; */
+}
+.leftdash{
+    gap: 30px;
+}
+.row1{
+    background-color: #d0ccd8;
+    border-radius: 8px;
+    border: none;
+    }
+h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+h5{
+    font-size: 20px;
+}
+p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.row1 img{
+    position: absolute;
+    object-fit: contain;
+}
+.row1{
+    gap: 10px !important;
+}
+.row1-text{
+    position: relative;
+    margin-left: 150px;
+}
+.goals{
+    background-color: #816cac;
+    border-radius: 8px;
+    border: none;
+}
+.daily {
+    border: 1px solid #010101;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+.booking{
+    background-color: transparent;
+    border: 1px solid #1F0066;
+    border-radius: 8px;
+    color: #010101;
+}
+.booking button{
+    background-color: transparent;
+    border: 2px solid #1F0066;
+    color: #1F0066;
+    font-weight: 600;
+}
+.column1{
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #1F0066;
+}
+.horizontal line{
+    border: 1px solid #1F0066;
+}
+.appointment{
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #1F0066;
+}
+.scheduled-appointment{
+    background-color: #644d99;
+    border-radius: 5px;
+    color: #f5f5f5;
+}
+.count{
+    background-color: #DB7474;
+    border-radius: 8px;
+}
+.countp{
+    background-color: #7a96aa;
+    border-radius: 8px;
+}
+.countpc{
+    background-color: #c2764b;
+    border-radius: 8px;
+}
+.pic{
+    border-radius: 100%;
+    background-color: #f5f5f5;
+    height: 50px;
+    width: 50px;
+}
+.countbox{
+    background-color: #644d99;
+    border-radius: 8px;
+    max-width: 227px;
+    padding: 10px;
+}
+.count-text1{
+    background-color: #f5f5f5;
+    border: none;
+    max-width: 180px;
+    height: 248px;
+    border-radius: 8px;
 }

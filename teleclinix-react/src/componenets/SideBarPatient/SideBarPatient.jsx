@@ -8,21 +8,22 @@ import './SideBarPatient.css'
 function SideBarPatient () {
     return(
         <div className="container-fluid p-0">
-            <div className="side">
-            <div className="logo">
+            <div className="side p-3" >
+            <div className="logo mt-3">
                 <img src="" alt="logo" />
             </div>
             <div className="info m-2">
-                <div className="user">
+                <div className="user p-3">
                     <img src="" alt="user image or dummy" />
-                    <h3>No Trouble; to be auto generated</h3>
+                    <h5 className="mt-3">No Trouble; to be auto generated</h5>
                     <p>Patient</p>
                 </div>
                 <div className="menu">
-                    <div className="menulist d-flex">
-                        {/* <img src="🏠" alt="icon" /> */}
+                   <Link to='/'> <div className="menulist d-flex">
+                        {/* <img src="" alt="icon" /> */}
                         <p>🏠 <span> My Dashboard</span></p>
                     </div>
+                    </Link>
                     <div className="menulist d-flex">
                         {/* <img src="" alt="icon" /> */}
                         <p> 🩺 <span>Doctors</span></p>
