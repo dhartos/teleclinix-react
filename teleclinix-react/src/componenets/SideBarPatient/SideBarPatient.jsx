@@ -7,7 +7,7 @@ import './SideBarPatient.css'
 
 function SideBarPatient () {
     return(
-        <div className="container-fluid p-0">
+        <div className="containe p-0">
             <div className="side p-3" >
             <div className="logo mt-3">
                 <img src="" alt="logo" />

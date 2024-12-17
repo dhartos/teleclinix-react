@@ -12,14 +12,14 @@ function PatientDashboard () {
     return (
         <div className="container-fluid p-0 d-flex justify-content-between">
              <SideBarPatient/>
-            <div className="dashboard w-100 align-items-center">
+            <div className="dashboard m-2 w-100 align-items-center">
                 {/* <SideBarPatient/> */}
                 <div className="leftdash mt-5">
-                    <div className=" top-leftdash mb-3 d-flex justify-content-between align-items-center">
+                    <div className=" top-leftdash mb-3 d-flex justify-content-center align-items-center">
                         <div className="topright-leftdash">
                             <div className="row1 d-flex justify-content-between ">
                             <div className="image-container">
-                            <img src={topleft} width={'150px'} height={'250px'} alt="dr image" className="pl-2"/>
+                            <img src={topleft}  height={'250px'} alt="dr image" className="pl-2"/>
                             </div>
                                 <div className="row1-text">
                                     <h3 className="m-2">Hi No Trouble ; to be generated</h3>
@@ -39,17 +39,17 @@ function PatientDashboard () {
                             <div className="date mt-3">
                                 <h3>Date: November 03, 2024</h3>
                             </div>
-                            <div className="booking mt-4 d-flex">
-                                <div className="booking-text p-3">
+                            <div className="booking mt-3 d-flex">
+                                <div className="booking-text m-3">
                                     <h3>Book an Appointment</h3>
-                                    <p className="text-wrap mt-3">Book your medical appointment conveniently and quickly through our user friendly web app. <br />
+                                    <p className="text-wrap mt-3 p-2">Book your medical appointment conveniently and quickly through our user friendly web app. <br />
                                     Schedule your appointment now and get the care you need, when you need it.</p>
                                     <Link to='/schedule-patient'>
                                     <button type="submit" onClick={'handleSchedule'}>Schedule an appointment</button>
                                     </Link>
                                 </div>
-                                <div className="image-container">
-                                    <img src={bookdp} alt="dr image" width={'150px'} height={'250px'} />
+                                <div className="image-containe">
+                                    <img src={bookdp} alt="dr image" width={'150px'} height={'240px'} />
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ function PatientDashboard () {
                             </div>
                         </div>
                     </div>
-                    <div className="patient-activity d-flex flex-wrap justify-content-between ">
+                    <div className="patient-activity d-flex flex-wrap justify-content-between m-5">
                         <div className="count mb-3 d-flex">
                             <div className="countdp">
                                 <img src="" alt="img" className=" pic my-3" />
@@ -124,7 +124,7 @@ function PatientDashboard () {
                             </div>
                         </div>
                     </div>
-                    <div className="activity d-flex flex-wrap justify-content-between">
+                    <div className="activity d-flex flex-wrap justify-content-between m-5">
                         <div className="count1">
                             <h3>My Activity</h3>
                             <div className="countbox">
@@ -149,20 +149,20 @@ function PatientDashboard () {
                         <div className="count1">
                             <h3>Doctors</h3>
                             <div className="countbox">
-                            <div className="counttext">
+                            <div className="count-text1 mb-2">
                             <div className="countdp">
                                 <img src="" alt="doctor image" />
                             </div>
-                            <div className="count-text1 m-4 p-1">
+                            <div className="count-text m-4 p-1">
                                 <h3>Dr Enitan</h3>
                                 <p>General Doctor</p>
                             </div>
                         </div>
-                        <div className="counttext">
+                        <div className="count-text1 mb-2">
                             <div className="countdp">
                                 <img src="" alt="doctor image" />
                             </div>
-                            <div className="count-text1 m-4 p-1">
+                            <div className="count-text m-4 p-1">
                                 <h3>Dr Enitan</h3>
                                 <p>General Doctor</p>
                             </div>
