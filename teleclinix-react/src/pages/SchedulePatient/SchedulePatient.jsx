@@ -56,7 +56,7 @@ function SchedulePatient () {
               <input type="text" placeholder="Kindly type out"/>
             </div>
             <div className="form-group">
-              <label>Last Medication Used</label>
+              <label>Last Medication Used <span>in the last 5hours</span></label>
               <input type="text" placeholder="Kindly type out"/>
             </div>
             <div className="form-group">
