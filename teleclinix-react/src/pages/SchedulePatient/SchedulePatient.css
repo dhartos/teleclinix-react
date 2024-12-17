@@ -1,55 +1,10 @@
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .user-info {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .user-info .avatar {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 10px 0;
-    display: block;
-    border-radius: 5px;
-  }
-  
-  .nav a.active {
-    background-color: #fff;
-    color: #1F0066;
-  }
-  
-  .bottom-links {
-    margin-top: auto;
-  }
-  
-  .bottom-links a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-  }
-  .appointment-header {
-    margin-bottom: 20px;
-  }
+.appointment-form{
+  gap: 30px;
+}
   
   .header-card {
     background-color: #eae6f2;
     border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   
   .header-card h2 {
@@ -71,11 +26,14 @@
   .form-group {
     margin-bottom: 15px;
   }
-  
+  .form-group span{
+    font-size: 12px;
+    color: #1F0066;
+  }
   input, select, button {
     width: 100%;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #1F0066;
     border-radius: 5px;
   }
   
@@ -101,6 +59,7 @@
   .form-actions {
     margin-top: 20px;
     text-align: right;
+    gap: 20px;
   }
   
   button.cancel {

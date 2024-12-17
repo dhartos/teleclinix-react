@@ -12,6 +12,11 @@
     margin-bottom: 10px;
     align-items: center;
     margin-top: 30px;
+    padding: 10px;
+    text-decoration: none; 
+    color: #f5f5f5; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .menulist p {
     display: flex;
@@ -20,6 +25,17 @@
     margin: 0;
 }
 .bottommenu {
-    margin-top: 500px;
+    margin-top: 300px;
 }
 
+.menulist:hover {
+    background-color: white;
+    color: #1F0066;
+}
+
+.active-link {
+    background-color: white;
+    color: #f5f5f5;
+    font-weight: bold; 
+    text-decoration: none !important;
+}

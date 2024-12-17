@@ -1,112 +1,142 @@
-body{
+body {
     padding: 0;
     background-color: #fff;
     font-family: Plus Jakarta Sans;
     overflow-x: hidden;
     /* user-select: none; */
 }
-.top-leftdash{
+
+.top-leftdash {
     gap: 100px;
 }
-.topright-leftdash{
+
+.topright-leftdash {
     max-width: 450px;
 }
-.row1{
+
+.row1 {
     background-color: #d0ccd8;
     border-radius: 8px;
     border: none;
-    /* position: relative; */
-    }
-h3{
+    padding-top: 40px;
+}
+
+h3 {
     font-size: 20px;
     font-weight: 600;
 }
-h5{
+
+h5 {
     font-size: 20px;
 }
-p{
+
+p {
     font-size: 14px;
     font-weight: 500;
 }
-.row1 img{
+
+.row1 img {
     object-fit: contain;
 }
+
 /* .row1-text{
     position: relative;
     margin-left: 40px;
 } */
-.goals{
+.image-container {
+    position: relative;
+    top: -80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.goals {
     background-color: #816cac;
     border-radius: 8px;
     border: none;
 }
+
 .daily {
     border: 1px solid #010101;
     border-radius: 8px;
     background-color: #f5f5f5;
 }
-.booking{
+
+.booking {
     background-color: transparent;
     border: 1px solid #1F0066;
     border-radius: 8px;
     color: #010101;
 }
-.booking button{
+
+.booking button {
     background-color: transparent;
     border: 2px solid #1F0066;
     color: #1F0066;
     font-weight: 600;
     height: auto;
 }
-.column1{
+
+.column1 {
     background-color: transparent;
     border-radius: 8px;
     border: 1px solid #1F0066;
 }
-.horizontal line{
+
+.horizontal line {
     border: 1px solid #1F0066;
 }
-.appointment{
+
+.appointment {
     background-color: transparent;
     border-radius: 8px;
     border: 1px solid #1F0066;
 }
-.scheduled-appointment{
+
+.scheduled-appointment {
     background-color: #644d99;
     border-radius: 5px;
     color: #f5f5f5;
 }
-.patient-activity, .activity{
+
+.patient-activity,
+.activity {
     width: 90%;
 }
-.count{
+
+.count {
     background-color: #DB7474;
     border-radius: 8px;
     max-width: 370px;
 }
-.countp{
+
+.countp {
     background-color: #7a96aa;
     border-radius: 8px;
     max-width: 370px;
 }
-.countpc{
+
+.countpc {
     background-color: #c2764b;
     border-radius: 8px;
     max-width: 370px;
 }
-.pic{
+
+.pic {
     border-radius: 100%;
     background-color: #f5f5f5;
     height: 50px;
     width: 50px;
 }
-.countbox{
+
+.countbox {
     background-color: #644d99;
     border-radius: 8px;
     max-width: 227px;
     padding: 10px;
 }
-.count-text1{
+
+.count-text1 {
     background-color: #f5f5f5;
     border: none;
     max-width: 180px;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 //style
@@ -19,11 +19,11 @@ function SideBarPatient () {
                     <p>Patient</p>
                 </div>
                 <div className="menu">
-                   <Link to='/'> <div className="menulist d-flex">
+                   <NavLink to='/'> <div className="menulist d-flex">
                         {/* <img src="" alt="icon" /> */}
                         <p>🏠 <span> My Dashboard</span></p>
                     </div>
-                    </Link>
+                    </NavLink>
                     <div className="menulist d-flex">
                         {/* <img src="" alt="icon" /> */}
                         <p> 🩺 <span>Doctors</span></p>
