@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //style
 import './PatientDashboard.css'
@@ -39,7 +40,9 @@ function PatientDashboard () {
                                     <h3>Book an Appointment</h3>
                                     <p className="text-wrap">Book your medical appointment conveniently and quickly through our user friendly web app. <br />
                                     Schedule your appointment now and get the care you need, when you need it.</p>
+                                    <Link to='/schedule-patient'>
                                     <button type="submit" onClick={'handleSchedule'}>Schedule an appointment</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

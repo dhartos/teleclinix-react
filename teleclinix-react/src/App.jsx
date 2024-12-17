@@ -6,6 +6,7 @@ import LoginPage from './pages/Auth/LoginPage/LoginPage';
 import RegisterPage from './pages/Auth/RegisterPage/RegisterPage';
 import Header from './componenets/Header/Header';
 import PatientDashboard from './pages/PatientDashboard/PatientDashboard'
+import SchedulePatient from './pages/SchedulePatient/SchedulePatient';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   {/* <Route path='/authentication/login' element={<LoginPage setLogin={setLogin} />} /> */}
   <Route path='/authentication/register' element={<RegisterPage />} />
   <Route path='/patientdashboard' element={<PatientDashboard />}/>
+  <Route path='/schedule-patient' element={<SchedulePatient />}/>
   </Routes>
   </Router>
  )

@@ -1,0 +1,167 @@
+.main, .appointment-form, .radio-group, .form-actions{
+    display: flex;
+    gap: 10px;
+}
+.sidebar {
+    background-color: #1F0066;
+    color: #fff;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .sidebar {
+    width: 250px; 
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.minimized {
+    width: 60px; 
+  }
+  
+  .sidebar.minimized .nav a {
+    display: none;
+  }
+  
+  .sidebar.minimized .logo,
+  .sidebar.minimized .user-info {
+    text-align: center;
+  }
+  
+  /* Example for icons-only view in minimized state */
+  .sidebar.minimized .nav a::before {
+    content: attr(data-icon);
+    display: block;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .user-info {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .user-info .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .nav a.active {
+    background-color: #fff;
+    color: #1F0066;
+  }
+  
+  .bottom-links {
+    margin-top: auto;
+  }
+  
+  .bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Main Content Styles */
+  .main {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .appointment-header {
+    margin-bottom: 20px;
+  }
+  
+  .header-card {
+    background-color: #eae6f2;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-card h2 {
+    font-size: 2em;
+    color: #3b0054;
+  }
+  
+  .header-card a {
+    color: #1F0066;
+    text-decoration: underline;
+  }
+  
+  /* Form Styles */
+  .appointment-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .date-options button,
+  .time-options button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  .date-options button:hover,
+  .time-options button:hover, .cancel:hover {
+    background-color: #663ec4;
+    color: #f5f5f5;
+    border: none;
+  }
+  
+  /* Action Buttons */
+  .form-actions {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  button.cancel {
+    background-color: transparent;
+    border: 1px solid #1F0066;
+    border-radius: 8px;
+    color: #333;
+  }
+  
+  button.book {
+    background-color: #1F0066;
+    color: #fff;
+    border-radius: 8px;
+  }
