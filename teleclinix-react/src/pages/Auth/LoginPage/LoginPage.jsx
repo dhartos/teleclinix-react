@@ -3,13 +3,55 @@ import React, { useState } from 'react';
 //style
 import './LoginPage.css'
 import teleclinixlogo from '../../../assets/teleclinixlogo.svg'
+import banner from '../../../assets/banner.svg'
 
 
-const LoginPage = () => {
+const LoginPage = ({ setLogin }) => {
   const [isWhiteBackground, setIsWhiteBackground] = useState(false);
 
   const toggleBackground = () => {
     setIsWhiteBackground((prev) => !prev);
+  };
+
+  const signIn = async (e) => {
+    e.preventDefault();
+    const accessToken = localStorage.getItem('adminAuthToken')
+    if (courseTitle && courseDescription && courseMaterial) {
+      const formData = new FormData()
+
+      formData.append("course_title", courseTitle)
+      formData.append("course_description", courseDescription)
+      formData.append("program_type", courseProgram)
+      formData.append("course_files", courseMaterial)
+      formData.append("course_status", 'active')
+      formData.append("course_objectives", courseDescription)
+
+      formData.forEach((value, key) => {
+        console.log(`${key}:`, value);
+      })
+
+      const response = await fetch('https://devapi.rangemeatacademyltd.com/api/v1/admin/courses?course_file', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          // 'Content-Type': 'multipart/form-data',
+        },
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('Upload Successful:', data);
+
+      setCourseTitle('');
+      setCourseDescription('');
+      setCourseMaterial(null);
+    } else {
+      alert("Please fill in all fields");
+    }
   };
 
   return (
@@ -24,7 +66,7 @@ const LoginPage = () => {
           minHeight: '100vh',
           transition: 'background-color 0.3s ease',
         }}
-      ></div>
+      >
       <div className="d-flex justify-content-between align-items-center">
         <h1 className="auth mt-5 p-3"></h1>
         <img src={teleclinixlogo} alt="TeleClinix logo" />
@@ -36,17 +78,17 @@ const LoginPage = () => {
           onClick={toggleBackground}
           aria-label="Switch to white background"
         >
-          Colored not fun? Switch to white
+        {!isWhiteBackground ? 'Colored not fun? Switch to white' : 'White not fun? Switch to colored'}
         </button>
       </div>
 
-      <div className="d-flex flex-wrap align-items-center justify-content-center login-container">
+      <div className=" mid d-flex flex-wrap align-items-center justify-content-center login-container">
         <div className="flex-1 ml-[60px] mt-[46px] items-center justify-center">
-          <Image
-            src={Banner}
+          <img
+            src={banner}
             alt="banner promoting TeleClinix services"
-            width={504}
-            height={494}
+            width={400}
+            height={390}
           />
           <button
             className="flex items-center justify-center font-medium text-2xl mt-[46px] border rounded-lg p-2 w-[504px]"
@@ -70,15 +112,15 @@ const LoginPage = () => {
             To keep connected with us, kindly login with your personal
             information and continue your medical consultation.
           </p>
-          <form className="mt-6" aria-label="Sign up form">
+          <form onSubmit={signIn} className="mt-6" aria-label="Sign up form">
             <div className="mb-[30px]">
-              <Email label="Email Address" placeholder="" borderColor="#1F0066" />
+              <input type="email" label="Email Address" placeholder="" borderColor="#1F0066" />
             </div>
             <div className="mb-[12px]">
-              <PasswordInput label="Password" placeholder="" />
+              <input type="password" label="Password" placeholder="" />
             </div>
             <div className="flex justify-between text-base" style={{ color: '#1F0066' }}>
-              <Checkbox label="Remember Me" />
+              <input type="checkbox" label="Remember Me" />
               <div className="underline text-base">Forgot password?</div>
             </div>
 
@@ -103,7 +145,7 @@ const LoginPage = () => {
                 aria-label="Sign up with Facebook"
               >
                 <div className="w-[50px] h-[50px] mr-[19px] bg-white rounded-full flex justify-center items-center">
-                  <Image src={FacebookIcon} alt="Facebook logo" width={32} height={32} />
+                  <img src="" alt="Facebook logo" width={32} height={32} />
                 </div>
               </a>
               <a
@@ -113,7 +155,7 @@ const LoginPage = () => {
                 aria-label="Sign up with Google"
               >
                 <div className="w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center">
-                  <Image src={Google} alt="Google logo" width={32} height={32} />
+                  <img src="" alt="Google logo" width={32} height={32} />
                 </div>
               </a>
               <a
@@ -123,13 +165,14 @@ const LoginPage = () => {
                 aria-label="Sign up with Apple"
               >
                 <div className="w-[50px] h-[50px] ml-[19px] bg-white rounded-full flex justify-center items-center">
-                  <Image src={Apple} alt="Apple logo" width={32} height={32} />
+                  <img src="" alt="Apple logo" width={32} height={32} />
                 </div>
               </a>
             </div>
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

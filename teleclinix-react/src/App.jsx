@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 import SideBarPatient from './componenets/SideBarPatient/SideBarPatient';
@@ -11,6 +11,8 @@ import SchedulePatient from './pages/SchedulePatient/SchedulePatient';
 
 function App() {
 
+    const [login, setLogin] = useState(false)
+    
  return (
   <Router>
   <Routes>

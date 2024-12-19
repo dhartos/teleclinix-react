@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 //style
 import './RegisterPage.css'
 import teleclinixlogo from '../../../assets/teleclinixlogo.svg'
+import banner from '../../../assets/banner.svg'
 
 
 const RegisterPage = () => {
@@ -36,13 +37,13 @@ const RegisterPage = () => {
           onClick={toggleBackground}
           aria-label="Switch to white background"
         >
-          Colored not fun? Switch to white
+         {!isWhiteBackground ? 'Colored not fun? Switch to white' : 'White not fun? Switch to colored'}
         </button>
       </div>
 
-      <div className="d-flex flex-wrap align-items-center justify-content-center login-container">
+      <div className="d-flex flex-wrap align-items-center justify-content-center login-container mt-5">
         <div className="flex-1 ml-[60px] mt-[46px] items-center justify-center">
-        <img src='{}'
+        <img src={banner}
         alt='banner promoting TeleClinix services'
          width={1274} 
          height={854} />
