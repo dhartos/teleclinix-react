@@ -1,0 +1,11 @@
+.switch button{
+    border: none;
+}
+.banner button:hover, .switch button:hover{
+    background-color: #1F0066;
+    border: none;
+    color: #f5f5f5 !important;
+}
+p{
+    font-size: 16px;
+}

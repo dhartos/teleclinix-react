@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 //style
 import './RegisterPage.css'
 import teleclinixlogo from '../../../assets/teleclinixlogo.svg'
 import banner from '../../../assets/banner.svg'
-
+import facebook from '../../../assets/logos_facebook.svg'
+import apple from '../../../assets/apple.svg'
+import google from '../../../assets/google.svg'
 
 const RegisterPage = () => {
   const [isWhiteBackground, setIsWhiteBackground] = useState(false);
@@ -15,8 +18,22 @@ const RegisterPage = () => {
 
   return (
     <div className="container-fluid p-0">
+      <div className="switch d-flex justify-content-between align-items-center m-3">
+      <div className="d-flex align-items-center">
+        <h1 className="auth mt-5 p-3"></h1>
+        <img src={teleclinixlogo} alt="TeleClinix logo" />
+      </div>
+        <button
+          className="text-xl font-medium underline w-25 p-1"
+          style={{ color: '#1F0066', cursor: 'pointer' }}
+          onClick={toggleBackground}
+          aria-label="Switch to white background"
+        >
+         {!isWhiteBackground ? 'Colored not fun? Switch to white' : 'White not fun? Switch to colored'}
+        </button>
+      </div>
       <div
-        className="absolute"
+        className="absolute m-5"
         role="application"
         style={{
           background: isWhiteBackground
@@ -26,51 +43,46 @@ const RegisterPage = () => {
           transition: 'background-color 0.3s ease',
         }}
       >
-      <div className="d-flex justify-content-between align-items-center">
-        <h1 className="auth mt-5 p-3"></h1>
-        <img src={teleclinixlogo} alt="TeleClinix logo" />
-      </div>
-      <div className="switch">
-        <button
-          className="text-xl font-medium underline"
-          style={{ color: '#1F0066', cursor: 'pointer' }}
-          onClick={toggleBackground}
-          aria-label="Switch to white background"
-        >
-         {!isWhiteBackground ? 'Colored not fun? Switch to white' : 'White not fun? Switch to colored'}
-        </button>
-      </div>
 
-      <div className="d-flex flex-wrap align-items-center justify-content-center login-container mt-5">
-        <div className="flex-1 ml-[60px] mt-[46px] items-center justify-center">
+      <div className=" mid d-flex flex-wrap align-items-center justify-content-center login-container mt-5 mb-2">
+        <div className=" banner flex-1 ml-[60px] mt-[46px] items-center justify-center mt-5 w-50">
         <img src={banner}
         alt='banner promoting TeleClinix services'
-         width={1274} 
-         height={854} />
+         width={400} 
+         height={390} />
+         <Link to='/authentication/login'>
           <button
-            className='flex items-center justify-center font-medium text-2xl mt-[62px] border rounded-lg p-4 w-[504px]' 
-            style={{ borderColor:'#1F0066' }} 
+            className="font-medium text-2xl mt-4 border rounded-lg p-2 w-50"
+            style={{ borderColor: '#1F0066', color: '#1F0066' }}
             aria-label="Already have an account? Sign in"
           >
-        Already have an account? Sign in
+              Already have an account? Sign in
           </button>
+          </Link>
         </div>
         <div className="flex-1 mr-[60px] ml-[83px]">
-        <h1 className='font-semibold text-3xl mt-[38px] mb-[15px]'>Welcome to TeleClinix</h1>
+        <h1 className='font-semibold text-3xl mt-5 mb-[15px]'>Welcome to TeleClinix</h1>
         <p className='font-medium text-xl line-height: 1.5rem'> 
         To get connected with us, kindly signup with your <br /> personal information and start using our medical <br /> services.
         </p>
-          <form className="mt-6" aria-label="Sign up form">
+          <form className="mt-5" aria-label="Sign up form">
             <div className="mb-[30px]">
-              <input label="Email Address" placeholder="Email Address" borderColor="#1F0066" />
+              <input
+              className='p-2' 
+              label="Email Address" placeholder="Email Address" borderColor="#1F0066" />
             </div>
             <div className="mb-[12px]">
-              <input label="Password" placeholder="Password" />
+              <input 
+              className='p-2' 
+              label="Password" 
+              placeholder="Password" />
             </div>
             <div className=''>
-                            <input label="Confirm Password" placeholder="Confirm Password" />
-                            <p className='mt-[20px]'>Password must be the same as above</p>        
-                        </div>
+              <input 
+              className='p-2' 
+              label="Confirm Password" placeholder="Confirm Password" />
+              <p className='mt-[20px]'>Password must be the same as above</p>        
+              </div>
             <div className="mt-6 flex justify-center align-middle">
               <button
                 type="submit"
@@ -81,18 +93,18 @@ const RegisterPage = () => {
                 Sign-Up
               </button>
             </div>
-            <p className="mt-[30px] font-medium text-xl" style={{ color: '#1F0066' }}>
+            <p className="mt-3" style={{ color: '#1F0066' }}>
               or signup with
             </p>
-            <div className="flex mt-[25px]">
+            <div className="d-flex justify-content-between mt-[25px]">
               <a
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Sign up with Facebook"
               >
-                <div className="w-[50px] h-[50px] mr-[19px] bg-white rounded-full flex justify-center items-center">
-                  <img src='{} 'alt="Facebook logo" width={32} height={32} />
+                <div className="w-[50px] h-[50px] mr-[19px]  rounded-full flex justify-center items-center">
+                  <img src={facebook}alt="Facebook logo" width={32} height={32} />
                 </div>
               </a>
               <a
@@ -101,8 +113,8 @@ const RegisterPage = () => {
                 rel="noopener noreferrer"
                 aria-label="Sign up with Google"
               >
-                <div className="w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center">
-                  <img src='{} ' alt="Google logo" width={32} height={32} />
+                <div className="w-[50px] h-[50px]  rounded-full flex justify-center items-center">
+                  <img src={google} alt="Google logo" width={32} height={32} />
                 </div>
               </a>
               <a
@@ -111,8 +123,8 @@ const RegisterPage = () => {
                 rel="noopener noreferrer"
                 aria-label="Sign up with Apple"
               >
-                <div className="w-[50px] h-[50px] ml-[19px] bg-white rounded-full flex justify-center items-center">
-                  <img src='{} ' alt="Apple logo" width={32} height={32} />
+                <div className="w-[50px] h-[50px] ml-[19px]  rounded-full flex justify-center items-center">
+                  <img src={apple} alt="Apple logo" width={32} height={32} />
                 </div>
               </a>
             </div>
