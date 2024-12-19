@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 //style
 import './PatientDashboard.css'
@@ -44,9 +44,9 @@ function PatientDashboard () {
                                     <h3>Book an Appointment</h3>
                                     <p className="text-wrap mt-3 p-2">Book your medical appointment conveniently and quickly through our user friendly web app. <br />
                                     Schedule your appointment now and get the care you need, when you need it.</p>
-                                    <Link to='/schedule-patient'>
+                                    <NavLink to='/schedule-patient'>
                                     <button type="submit" onClick={'handleSchedule'}>Schedule an appointment</button>
-                                    </Link>
+                                    </NavLink>
                                 </div>
                                 <div className="image-containe">
                                     <img src={bookdp} alt="dr image" width={'150px'} height={'240px'} />
