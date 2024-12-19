@@ -37,7 +37,7 @@ function Chatbox() {
                 <div className="chatuser d-flex justify-content-between align-items-center">
                     <p className="p-2">Name:</p>
                     <button onClick={'handleSwitch'} className="btn m-2 w-25">
-                         Switch to chat
+                         Switch to Video Call
                     </button>
                 </div>
                 <div className="chat-container mt-5">
