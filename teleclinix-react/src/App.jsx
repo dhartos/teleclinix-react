@@ -15,7 +15,7 @@ function App() {
   <Router>
   <Routes>
   {/* Authentication Routes */}
-  {/* <Route path='/authentication/login' element={<LoginPage setLogin={setLogin} />} /> */}
+  <Route path='/authentication/login' element={<LoginPage setLogin={setLogin} />} />
   <Route path='/authentication/register' element={<RegisterPage />} />
   <Route path='/' element={<PatientDashboard />}/>
   <Route path='/schedule-patient' element={<SchedulePatient />}/>
