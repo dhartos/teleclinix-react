@@ -45,10 +45,10 @@ const RegisterPage = () => {
       >
 
       <div className=" mid d-flex flex-wrap align-items-center justify-content-center login-container mt-5 mb-2">
-        <div className=" banner flex-1 ml-[60px] mt-[46px] items-center justify-center mt-5 w-50">
+        <div className=" banner align-items-center justify-content-center m-5 w-50">
         <img src={banner}
         alt='banner promoting TeleClinix services'
-         width={400} 
+         width={350} 
          height={390} />
          <Link to='/authentication/login'>
           <button
@@ -60,8 +60,8 @@ const RegisterPage = () => {
           </button>
           </Link>
         </div>
-        <div className="flex-1 mr-[60px] ml-[83px]">
-        <h1 className='font-semibold text-3xl mt-5 mb-[15px]'>Welcome to TeleClinix</h1>
+        <div className="">
+        <h1 className=''>Welcome to TeleClinix</h1>
         <p className='font-medium text-xl line-height: 1.5rem'> 
         To get connected with us, kindly signup with your <br /> personal information and start using our medical <br /> services.
         </p>
@@ -96,7 +96,7 @@ const RegisterPage = () => {
             <p className="mt-3" style={{ color: '#1F0066' }}>
               or signup with
             </p>
-            <div className="d-flex justify-content-between mt-[25px]">
+            <div className="d-flex justify-content-between mt-[25px] mb-3">
               <a
                 href="https://www.facebook.com"
                 target="_blank"

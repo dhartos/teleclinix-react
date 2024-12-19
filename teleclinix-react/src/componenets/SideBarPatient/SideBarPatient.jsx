@@ -4,16 +4,19 @@ import { NavLink } from "react-router-dom";
 
 //style
 import './SideBarPatient.css'
+import teleclinix from '../../../src/assets/teleclinixlogo.svg'
 
 function SideBarPatient () {
     return(
         <div className="containe p-0">
             <div className="side p-3" >
             <div className="logo mt-3">
-                <img src="" alt="logo" />
+                <img src={teleclinix} alt="logo" 
+                width={90} 
+                height={90} />
             </div>
             <div className="info m-2">
-                <div className="user p-3">
+                <div className="user p-3 m-5">
                     <img src="" alt="user image or dummy" />
                     <h5 className="mt-3">No Trouble; to be auto generated</h5>
                     <p>Patient</p>
