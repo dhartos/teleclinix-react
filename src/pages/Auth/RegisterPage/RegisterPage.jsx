@@ -100,7 +100,7 @@ const RegisterPage = () => {
               alt='banner promoting TeleClinix services'
               width={350}
               height={390} />
-            <Link to='/authentication/login'>
+            <Link to='/'>
               <button
                 className="font-medium text-2xl mt-4 border rounded-lg p-2 w-50"
                 style={{ borderColor: '#1F0066', color: '#1F0066' }}
