@@ -22,23 +22,21 @@ function SideBarPatient () {
                     <p>Patient</p>
                 </div>
                 <div className="menu m-4">
-                   <NavLink to='/'> <div className="menulist d-flex">
-                        {/* <img src="" alt="icon" /> */}
+                   <NavLink to='/patient-dashboard'> <div className="menulist d-flex">
                         <p>🏠 <span> My Dashboard</span></p>
                     </div>
                     </NavLink>
                     <div className="menulist d-flex">
-                        {/* <img src="" alt="icon" /> */}
                         <p> 🩺 <span>Doctors</span></p>
                     </div>
                     <div className="menulist d-flex">
-                        {/* <img src="" alt="icon" /> */}
                         <p>📅 <span>Appointments</span></p>
                     </div>
+                    <NavLink to='/chatbox-patient'>
                     <div className="menulist d-flex">
-                        {/* <img src="" alt="icon" /> */}
                         <p>💬 <span>Message/Chatroom</span></p>
                     </div>
+                    </NavLink>
                     <div className="menulist d-flex">
                         {/* <img src="" alt="icon" /> */}
                         <p>👥 <span>Communities</span></p>

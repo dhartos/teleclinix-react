@@ -1,0 +1,49 @@
+button{
+    border: none;
+}
+button:hover{
+    border: none;
+    background-color: #1F0066;
+    color: #f9f9f9;
+}
+.chatbox {
+    gap: 10px;
+    border: 1px solid #1F0066;
+    border-radius: 8px;
+    background-color: transparent;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+  
+  .chatbox input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chatbox button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color:#1F0066;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .chatbox button:hover {
+    background-color: #0056b3;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .message {
+  margin-bottom: 1rem; 
+}
