@@ -140,10 +140,10 @@ function PatientDashboard () {
                                 <p>Ladies Wings</p>
                                 <button type="submit">Join</button>
                             </div>
-                            <div className="count-text1 m-4 p-1">
+                            {/* <div className="count-text1 m-4 p-1">
                                 <p>Ladies Wings</p>
                                 <button type="submit">Join</button>
-                            </div>
+                            </div> */}
                             </div>
                         </div>
                         <div className="count1">
@@ -158,7 +158,7 @@ function PatientDashboard () {
                                 <p>General Doctor</p>
                             </div>
                         </div>
-                        <div className="count-text1 mb-2">
+                        {/* <div className="count-text1 mb-2">
                             <div className="countdp">
                                 <img src="" alt="doctor image" />
                             </div>
@@ -166,7 +166,7 @@ function PatientDashboard () {
                                 <h3>Dr Enitan</h3>
                                 <p>General Doctor</p>
                             </div>
-                        </div>
+                        </div> */}
                             </div>
                         </div>
                     </div>

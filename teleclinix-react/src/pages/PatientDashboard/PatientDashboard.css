@@ -134,6 +134,7 @@ p {
     border-radius: 8px;
     max-width: 227px;
     padding: 10px;
+    overflow: hidden;
 }
 
 .count-text1 {

@@ -15,13 +15,13 @@ function SideBarPatient () {
                 width={90} 
                 height={90} />
             </div>
-            <div className="info m-2">
-                <div className="user p-3 m-5">
-                    <img src="" alt="user image or dummy" />
-                    <h5 className="mt-3">No Trouble; to be auto generated</h5>
+            <div className="info m-3">
+                <div className="user  m-5">
+                    <img src="" alt="user" />
+                    {/* <h7 className="">No Trouble</h7> */}
                     <p>Patient</p>
                 </div>
-                <div className="menu">
+                <div className="menu m-4">
                    <NavLink to='/'> <div className="menulist d-flex">
                         {/* <img src="" alt="icon" /> */}
                         <p>🏠 <span> My Dashboard</span></p>

@@ -1,0 +1,65 @@
+# Query: vite
+# ContextLines: 1
+
+28 results - 4 files
+
+package-lock.json:
+    22          "@types/react-dom": "^18.3.1",
+    23:         "@vitejs/plugin-react": "^4.3.4",
+    24          "eslint": "^9.15.0",
+
+    28          "globals": "^15.12.0",
+    29:         "vite": "^6.0.1"
+    30        }
+
+  1364      },
+  1365:     "node_modules/@vitejs/plugin-react": {
+  1366        "version": "4.3.4",
+  1367:       "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-4.3.4.tgz",
+  1368        "integrity": "sha512-SCCPBJtYLdE8PX/7ZQAs1QAZ8Jqwih+0VBLum1EGqmCCQal+MIUqLCzj3ZUy8ufbC0cAM4LRlSTm7IQJwWT4ug==",
+
+  1381        "peerDependencies": {
+  1382:         "vite": "^4.2.0 || ^5.0.0 || ^6.0.0"
+  1383        }
+
+  6288      },
+  6289:     "node_modules/vite": {
+  6290        "version": "6.0.3",
+  6291:       "resolved": "https://registry.npmjs.org/vite/-/vite-6.0.3.tgz",
+  6292        "integrity": "sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==",
+
+  6300        "bin": {
+  6301:         "vite": "bin/vite.js"
+  6302        },
+
+  6306        "funding": {
+  6307:         "url": "https://github.com/vitejs/vite?sponsor=1"
+  6308        },
+
+package.json:
+   6    "scripts": {
+   7:     "dev": "vite",
+   8:     "build": "vite build",
+   9      "lint": "eslint .",
+  10:     "preview": "vite preview"
+  11    },
+
+  24      "@types/react-dom": "^18.3.1",
+  25:     "@vitejs/plugin-react": "^4.3.4",
+  26      "eslint": "^9.15.0",
+
+  30      "globals": "^15.12.0",
+  31:     "vite": "^6.0.1"
+  32    }
+
+README.md:
+  1
+  4  
+
+
+vite.config.js:
+  1: import { defineConfig } from 'vite'
+  2: import react from '@vitejs/plugin-react'
+  3  
+  4: // https://vite.dev/config/
+  5  export default defineConfig({

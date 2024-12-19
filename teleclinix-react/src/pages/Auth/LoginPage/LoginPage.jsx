@@ -167,6 +167,7 @@ const LoginPage = ({ setLogin }) => {
               </div>
 
               <div className="mt-[45px] flex justify-center align-middle">
+                <Link to={'/patient-dashboard'}>
                 <button
                   type="submit"
                   className="p-2 w-[375px] font-medium text-xl text-white rounded-lg hover:bg-gray-700"
@@ -175,6 +176,7 @@ const LoginPage = ({ setLogin }) => {
                 >
                   Sign-In
                 </button>
+                </Link>
               </div>
               <p className="mt-3 " style={{ color: '#1F0066' }}>
                 or signin with
