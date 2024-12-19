@@ -1,10 +1,14 @@
-button{
+.chatuser{
+  background-color: #abb8c5;
+} 
+.btn{
     border: none;
+    background-color: #f9f9f9;
 }
 button:hover{
     border: none;
     background-color: #1F0066;
-    color: #f9f9f9;
+    color: #f9f9f9 !important;
 }
 .chatbox {
     gap: 10px;
@@ -16,12 +20,12 @@ button:hover{
   }
   
   .chatbox input[type="text"] {
-    flex-grow: 1;
+    flex-grow: 2;
     border: none;
     outline: none;
     font-size: 14px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #abb8c5;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
   }
   
@@ -45,5 +49,22 @@ button:hover{
     margin-top: 5px;
   }
   .message {
-  margin-bottom: 1rem; 
-}
+    border-radius: 15px; /* Makes it rounded */
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px; 
+    max-width: 70%;
+    word-wrap: break-word; 
+  }
+  
+  .message.user {
+    background-color: #d1e7ff; 
+    align-self: flex-start;
+    max-width: 70% !important;
+  }
+  
+  .message.doctor {
+    background-color: #ffd1dc; 
+    align-self: flex-start; 
+  }
+  

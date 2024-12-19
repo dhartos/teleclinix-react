@@ -33,10 +33,10 @@ function Chatbox() {
     return(
         <div className="container-fluid p-0 d-flex justify-content-">
              <SideBarPatient/>
-            <div className="interface m-5">
+            <div className="interface m-5  w-100">
                 <div className="chatuser d-flex justify-content-between align-items-center">
                     <p className="p-2">Name:</p>
-                    <button onClick={'handleSwitch'} className="p-2">
+                    <button onClick={'handleSwitch'} className="btn m-2 w-25">
                          Switch to chat
                     </button>
                 </div>
@@ -49,8 +49,8 @@ function Chatbox() {
                  >
                    {msg.text}
                  </div>
-                 
                     ))}
+                    
                 </div>
 
                 {/* Chat Input */}
