@@ -8,6 +8,7 @@ import Header from './componenets/Header/Header';
 import PatientDashboard from './pages/PatientDashboard/PatientDashboard'
 import SchedulePatient from './pages/SchedulePatient/SchedulePatient';
 import Chatbox from './pages/Chatbox/Chatbox';
+import Videobox from './pages/Videobox/Videobox'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   <Route path='/patient-dashboard' element={<PatientDashboard />}/>
   <Route path='/schedule-patient' element={<SchedulePatient />}/>
   <Route path='/chatbox-patient' element={<Chatbox />}/>
+  <Route path='/videobox-patient' element={<Videobox />}/>
   </Routes>
   </Router>
  )
