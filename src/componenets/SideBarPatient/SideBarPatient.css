@@ -41,7 +41,8 @@
 }
 .user{
     border-radius: 100%;
-    background-color: burlywood;
+    background-color: transparent;
+    border: 2px solid #f5f5f5;
     width: 30px;
     height: 30px;
     align-items: center;

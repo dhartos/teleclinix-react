@@ -124,52 +124,39 @@ function PatientDashboard () {
                             </div>
                         </div>
                     </div>
-                    <div className="activity d-flex flex-wrap justify-content-between m-5">
-                        <div className="count1">
-                            <h3>My Activity</h3>
-                            <div className="countbox">
-                            <div className="count-text1 m-4 p-1">
-                                <p>Login Sessions displays here to ensure account privacy</p>
-                            </div>
-                            </div>
+                <div className="activity d-flex flex-wrap justify-content-between mt-5">
+                <div className="count1">
+                    <h3>My Activity</h3>
+                    <div className="countbox">
+                    <div className="count-text1 m-4 p-1">
+                        <p>Login Sessions displays here to ensure account privacy</p>
+                    </div>
+                    </div>
+                </div>
+                <div className="count1">
+                    <h3>Join a Community Today</h3>
+                    <div className="countbox">
+                    <div className="count-text1 m-4 p-1">
+                        <p>Ladies Wings</p>
+                        <button type="submit" className="mt-5">Join</button>
+                    </div>
+                    </div>
+                </div>
+                <div className="count1">
+                    <h3>Doctors</h3>
+                    <div className="countbox">
+                    <div className="count-text1 mb-2">
+                        <div className="countdp">
+                        <img src="" alt="doctor image" />
                         </div>
-                        <div className="count1">
-                            <h3>Join a Community Today</h3>
-                            <div className="countbox">
-                            <div className="count-text1 m-4 p-1">
-                                <p>Ladies Wings</p>
-                                <button type="submit">Join</button>
-                            </div>
-                            {/* <div className="count-text1 m-4 p-1">
-                                <p>Ladies Wings</p>
-                                <button type="submit">Join</button>
-                            </div> */}
-                            </div>
-                        </div>
-                        <div className="count1">
-                            <h3>Doctors</h3>
-                            <div className="countbox">
-                            <div className="count-text1 mb-2">
-                            <div className="countdp">
-                                <img src="" alt="doctor image" />
-                            </div>
-                            <div className="count-text m-4 p-1">
-                                <h3>Dr Enitan</h3>
-                                <p>General Doctor</p>
-                            </div>
-                        </div>
-                        {/* <div className="count-text1 mb-2">
-                            <div className="countdp">
-                                <img src="" alt="doctor image" />
-                            </div>
-                            <div className="count-text m-4 p-1">
-                                <h3>Dr Enitan</h3>
-                                <p>General Doctor</p>
-                            </div>
-                        </div> */}
-                            </div>
+                        <div className="count-text m-4 p-1">
+                        <h3>Dr Enitan</h3>
+                        <p>General Doctor</p>
                         </div>
                     </div>
+                    </div>
+                </div>
+                </div>
                 </div>
                 </div>
                 </div>

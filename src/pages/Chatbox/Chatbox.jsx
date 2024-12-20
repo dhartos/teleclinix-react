@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 //style
 import './Chatbox.css'
@@ -36,9 +37,11 @@ function Chatbox() {
             <div className="interface m-5  w-100">
                 <div className="chatuser d-flex justify-content-between align-items-center">
                     <p className="p-2">Name:</p>
+                    <NavLink to='/videobox-patient'>
                     <button onClick={'handleSwitch'} className="btn m-2 w-25">
                          Switch to Video Call
                     </button>
+                    </NavLink>
                 </div>
                 <div className="chat-container mt-5">
                 <div className="messages m-2 ">
@@ -66,52 +69,39 @@ function Chatbox() {
                 </div>
                 </div>
 
-                <div className="activity d-flex flex-wrap justify-content-between m-5">
-                        <div className="count1">
-                            <h3>My Activity</h3>
-                            <div className="countbox">
-                            <div className="count-text1 m-4 p-1">
-                                <p>Login Sessions displays here to ensure account privacy</p>
-                            </div>
-                            </div>
+                <div className="activity d-flex flex-wrap justify-content-between mt-5">
+                <div className="count1">
+                    <h3>My Activity</h3>
+                    <div className="countbox">
+                    <div className="count-text1 m-4 p-1">
+                        <p>Login Sessions displays here to ensure account privacy</p>
+                    </div>
+                    </div>
+                </div>
+                <div className="count1">
+                    <h3>Join a Community Today</h3>
+                    <div className="countbox">
+                    <div className="count-text1 m-4 p-1">
+                        <p>Ladies Wings</p>
+                        <button type="submit" className="mt-5">Join</button>
+                    </div>
+                    </div>
+                </div>
+                <div className="count1">
+                    <h3>Doctors</h3>
+                    <div className="countbox">
+                    <div className="count-text1 mb-2">
+                        <div className="countdp">
+                        <img src="" alt="doctor image" />
                         </div>
-                        <div className="count1">
-                            <h3>Join a Community Today</h3>
-                            <div className="countbox">
-                            <div className="count-text1 m-4 p-1">
-                                <p>Ladies Wings</p>
-                                <button type="submit">Join</button>
-                            </div>
-                            {/* <div className="count-text1 m-4 p-1">
-                                <p>Ladies Wings</p>
-                                <button type="submit">Join</button>
-                            </div> */}
-                            </div>
-                        </div>
-                        <div className="count1">
-                            <h3>Doctors</h3>
-                            <div className="countbox">
-                            <div className="count-text1 mb-2">
-                            <div className="countdp">
-                                <img src="" alt="doctor image" />
-                            </div>
-                            <div className="count-text m-4 p-1">
-                                <h3>Dr Enitan</h3>
-                                <p>General Doctor</p>
-                            </div>
-                        </div>
-                        {/* <div className="count-text1 mb-2">
-                            <div className="countdp">
-                                <img src="" alt="doctor image" />
-                            </div>
-                            <div className="count-text m-4 p-1">
-                                <h3>Dr Enitan</h3>
-                                <p>General Doctor</p>
-                            </div>
-                        </div> */}
-                            </div>
+                        <div className="count-text m-4 p-1">
+                        <h3>Dr Enitan</h3>
+                        <p>General Doctor</p>
                         </div>
                     </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
     )
