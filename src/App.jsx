@@ -9,6 +9,7 @@ import PatientDashboard from './pages/PatientDashboard/PatientDashboard'
 import SchedulePatient from './pages/SchedulePatient/SchedulePatient';
 import Chatbox from './pages/Chatbox/Chatbox';
 import Videobox from './pages/Videobox/Videobox'
+import VerifyPage from './pages/Auth/VerifyPage/VerifyPage';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   {/* Authentication Routes */}
   <Route path='/' element={<LoginPage setLogin={setLogin} />} />
   <Route path='/authentication/register' element={<RegisterPage />} />
+  <Route path='/authentication/verify' element={<VerifyPage />} />
   <Route path='/patient-dashboard' element={<PatientDashboard />}/>
   <Route path='/schedule-patient' element={<SchedulePatient />}/>
   <Route path='/chatbox-patient' element={<Chatbox />}/>

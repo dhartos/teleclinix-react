@@ -1,0 +1,19 @@
+.verify-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.verification-input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.form-control {
+    border: 1px solid #cc9933;
+    box-shadow: none;
+    padding: 0;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 //style
 import './RegisterPage.css'
@@ -38,7 +38,7 @@ const RegisterPage = () => {
       setError("");
       setSuccess("");
 
-      const response = await fetch("https://teleclinix-backend-api.onrender.com/api/register",
+      const response = await fetch("https://teleclinix-backend-api.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -64,6 +64,10 @@ const RegisterPage = () => {
     } catch (err) {
       setError("An error occurred. Please try again.");
     }
+
+    // Redirect to verification page after successful registration
+    navigate('/authentication/verify', { state: { email: email } });
+
   };
 
   return (
@@ -103,7 +107,7 @@ const RegisterPage = () => {
             <Link to='/'>
               <button
                 className="font-medium text-2xl mt-4 border rounded-lg p-2 w-50"
-                style={{ borderColor: '#1F0066', color: '#1F0066' }}
+                style={{ color: '#1F0066' }}
                 aria-label="Already have an account? Sign in"
               >
                 Already have an account? Sign in
@@ -126,7 +130,6 @@ const RegisterPage = () => {
                         placeholder="Email Address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        borderColor="#1F0066"
                 />
               </div>
               <div className="mb-[12px]">
