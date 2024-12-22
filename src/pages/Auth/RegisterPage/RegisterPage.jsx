@@ -10,6 +10,9 @@ import apple from '../../../assets/apple.svg'
 import google from '../../../assets/google.svg'
 
 const RegisterPage = () => {
+
+  const navigate = useNavigate()
+
   const [isWhiteBackground, setIsWhiteBackground] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,7 +41,7 @@ const RegisterPage = () => {
       setError("");
       setSuccess("");
 
-      const response = await fetch("https://teleclinix-backend-api.onrender.com/api/auth/register",
+      const response = await fetch("https://teleclinix-backend-api.onrender.com/api/register",
         {
           method: "POST",
           headers: {

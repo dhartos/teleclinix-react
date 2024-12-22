@@ -4,7 +4,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 //Styling
 import "./VerifyPage.css"
-
+import teleclinixlogo from '../../../assets/teleclinixlogo.svg'
 
 const VerifyPage = () => {
     const location = useLocation();
@@ -43,7 +43,7 @@ const VerifyPage = () => {
                 return;
             }
             try {
-                const response = await fetch('', {
+                const response = await fetch('https://teleclinix-backend-api.onrender.com/verify-token', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const VerifyPage = () => {
 
     async function requestVerificationCode(email) {
         try {
-            const response = await fetch('https://devapi.rangemeatacademyltd.com/api/v1/send/token', {
+            const response = await fetch('', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -125,10 +125,10 @@ const VerifyPage = () => {
         <div className='container-fluid p-0'>
             <div className="d-flex justify-content-between align-items-center">
                 <h1 className='mt-3 p-3'>TeleClinix</h1>
-                <img src="{reglogo}" alt="logo" />
+                <img src={teleclinixlogo} alt="logo" />
         </div>
 
-        <div className="d-flex flex-column align-items-center justify-content-center login-container mb-3 p-3">
+        <div className="d-flex flex-column align-items-center justify-content-center login-container m-5  p-3">
                 <div className="align-items-center  text-align-center">
                     <h2 className=""> Check Your Email: Enter Your Verification Code.</h2>
                     <p><i className='mt-4 mb-4'>We've sent a verification code to your registered email. Please enter the code below to verify your account and proceed.</i></p>
@@ -154,7 +154,7 @@ const VerifyPage = () => {
 
                 </div>
                 <div className="w-25 mt-4 d-flex align-items-center justify-content-center">
-                    <button onClick={handleSubmit} className='btn btn-primary w-50 btn-block'>Submit</button>
+                    <button onClick={handleSubmit} className=''>Submit</button>
                 </div>
                     <div className="text-center mt-5 mb-2">
                     <span>Didn't get a code? </span>
