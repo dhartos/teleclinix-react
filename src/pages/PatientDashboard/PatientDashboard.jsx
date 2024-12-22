@@ -45,7 +45,7 @@ function PatientDashboard () {
                                     <p className="text-wrap mt-3 p-2">Book your medical appointment conveniently and quickly through our user friendly web app. <br />
                                     Schedule your appointment now and get the care you need, when you need it.</p>
                                     <NavLink to='/schedule-patient'>
-                                    <button type="submit" onClick={'handleSchedule'}>Schedule an appointment</button>
+                                    <button type="submit">Schedule an appointment</button>
                                     </NavLink>
                                 </div>
                                 <div className="image-containe">
