@@ -38,7 +38,7 @@ function SchedulePatient () {
             </div>
             <div className="form-group">
               <label>Email Address</label>
-              <input type="text" placeholder="Consultation Only" className="p-2" disabled/>
+              <input type="text" placeholder="Email address" className="p-2" disabled/>
             </div>
             <div className="form-group">
               <label>Show Times For</label>
