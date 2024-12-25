@@ -4,3 +4,7 @@
 .rem p{
     font-size: 8px !important;
 }
+.banner img{
+    margin-left: -100px;
+    margin-top: 10px;
+}
