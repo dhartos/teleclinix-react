@@ -119,12 +119,12 @@ const RegisterPage = () => {
               </button>
             </Link>
           </div>
-          <div className="flex-1 m-5">
-            <h1  className='font-semibold text-3xl mt-5 mb-[15px]'style={{ color: '#1F0066' }} >
+          <div className="left flex-1 m-5">
+            <h1 className='font-semibold text-3xl mt-5 mb-[15px]'style={{ color: '#1F0066' }} >
               Welcome to TeleClinix</h1>
             <p className="font-medium text-xl mb-[31px]"
               style={{ color: '#1F0066', lineHeight: '1.5rem' }} >
-              To get connected with us, kindly signup with your  personal information and start using our medical services.
+              These fields are all necessary and all credentials collected is to provide right information to <br /> enhance patient-doctor matching and verification.
             </p>
             <form onSubmit={Register} className="mt-5" aria-label="Sign up form">
               {error && <p style={{ color: "red" }}>{error}</p>}
