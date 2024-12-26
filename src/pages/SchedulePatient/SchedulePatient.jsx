@@ -154,10 +154,10 @@ function SchedulePatient() {
               </div>
             </div>
 
-            <div className="form-actions d-flex justify-content-between">
-              <button className="cancel">Cancel</button>
-              <button className="book">Book</button>
-            </div>
+          </div>
+          <div className="form-actions d-flex justify-content-between">
+            <button className="cancel">Cancel</button>
+            <button className="book">Book</button>
           </div>
         </div>
       </div>
