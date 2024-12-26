@@ -15,7 +15,7 @@ const LoginPage = ({ setLogin }) => {
   const navigate = useNavigate();
   const [isWhiteBackground, setIsWhiteBackground] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [email, setEmail] = useState("user@example.com")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [remember, setRemember] = useState(false)
   const [error, setError] = useState("");
