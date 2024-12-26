@@ -11,6 +11,7 @@ import Chatbox from './pages/Chatbox/Chatbox';
 import Videobox from './pages/Videobox/Videobox'
 import VerifyPage from './pages/Auth/VerifyPage/VerifyPage';
 import RegisterPageDr from './pages/Doctor/RegisterPageDr/RegisterPageDr'
+import DashboardDr from './pages/Doctor/DashboardDr/DashboardDr'
 
 const App = () => {
     return (
@@ -55,6 +56,7 @@ function Layout() {
                 <Route path='/schedule-patient' element={<SchedulePatient />} />
                 <Route path='/chatbox-patient' element={<Chatbox />} />
                 <Route path='/videobox-patient' element={<Videobox />} />
+                <Route path='/dashboard-doctor' element={<DashboardDr />} />
             </Routes>
         </div>
     )
