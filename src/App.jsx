@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 import SideBarPatient from './componenets/SideBarPatient/SideBarPatient';
@@ -21,23 +21,32 @@ const App = () => {
 
 function Layout() {
     const location = useLocation();
-    const [login, setLogin] = useState(false)
+    // const [login, setLogin] = useState(false)
+    const [login, setLogin] = useState(() => {
+        // Retrieve login state from localStorage on initial load
+        return JSON.parse(localStorage.getItem('login')) || false;
+    });
+
+    useEffect(() => {
+        // Save login state to localStorage whenever it changes
+        localStorage.setItem('login', JSON.stringify(login));
+    }, [login]);
 
     const authRoutes = ['/', '/authentication/register', '/authentication/verify'];
 
-    // if (login && authRoutes.includes(location.pathname)) {
-    //     return <Navigate to="/patient-dashboard" replace />;
-    // }
+    if (login && authRoutes.includes(location.pathname)) {
+        return <Navigate to="/patient-dashboard" replace />;
+    }
 
     if (!login && !authRoutes.includes(location.pathname)) {
-        return <Navigate to="/" replace />;
+        return <Navigate to="/" />;
     }
 
     const shouldShowSidebar = !authRoutes.includes(location.pathname);
 
     return (
         <div className='d-flex'>
-            {shouldShowSidebar && <SideBarPatient setLogin={setLogin} />}
+            {login && shouldShowSidebar && <SideBarPatient setLogin={setLogin} />}
             <Routes>
                 <Route path='/' element={<LoginPage setLogin={setLogin} />} />
                 <Route path='/authentication/register' element={<RegisterPage />} />
