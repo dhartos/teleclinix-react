@@ -100,17 +100,15 @@ const RegisterPage = () => {
           transition: 'background-color 0.3s ease',
         }}
       >
-
-        <div className=" mid d-flex flex-wrap align-items-center justify-content-center login-container mt-5 mb-2">
-          <div className=" banner align-items-center justify-content-center m-5 w-50">
+        <div className="mid d-flex flex-wrap align-items-center justify-content-between login-container mt-5 mb-2">
+        <div className="banner align-items-center justify-content-center w-25">
             <img src={banner}
               alt='banner promoting TeleClinix services'
               width={350}
-              height={390} 
-              className='banner m-[30px]' />
+              height={390}/>
             <Link to='/'>
               <button
-                className="font-medium text-2xl mt-4 border rounded-lg p-2 w-50"
+                className="font-medium text-2xl mt-4 border rounded-lg p-2"
                 style={{ color: '#1F0066' }}
                 aria-label="Already have an account? Sign in"
               >
@@ -118,10 +116,12 @@ const RegisterPage = () => {
               </button>
             </Link>
           </div>
-          <div className="">
-            <h1 className=''>Welcome to TeleClinix</h1>
-            <p className='font-medium text-xl line-height: 1.5rem'>
-              To get connected with us, kindly signup with your <br /> personal information and start using our medical <br /> services.
+          <div className="flex-1 m-5">
+            <h1  className='font-semibold text-3xl mt-5 mb-[15px]'style={{ color: '#1F0066' }} >
+              Welcome to TeleClinix</h1>
+            <p className="font-medium text-xl mb-[31px]"
+              style={{ color: '#1F0066', lineHeight: '1.5rem' }} >
+              To get connected with us, kindly signup with your  personal information and start using our medical services.
             </p>
             <form onSubmit={Register} className="mt-5" aria-label="Sign up form">
               {error && <p style={{ color: "red" }}>{error}</p>}

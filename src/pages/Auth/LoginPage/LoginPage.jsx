@@ -110,13 +110,13 @@ const LoginPage = ({ setLogin }) => {
           transition: 'background-color 0.3s ease',
         }}
       >
-      <div className="mid d-flex flex-wrap align-items-center justify-content-center login-container mt-5 mb-2">
+      <div className="mid d-flex flex-wrap align-items-center justify-content-between login-container mt-5 mb-2">
       <div className=" banner align-items-center justify-content-center w-25">
         <img src={banner}
         alt='banner promoting TeleClinix services'
          width={350} 
          height={390}
-         className='banner m-[30px]'/>
+         className='banne '/>
          <Link to='/authentication/register'>
          <button
             className="font-medium text-2xl mt-4 border rounded-lg p-2 "
@@ -141,7 +141,7 @@ const LoginPage = ({ setLogin }) => {
               To keep connected with us, kindly login with your personal
               information and continue your medical consultation.
             </p>
-            <form onSubmit={signIn} className="mt-6" aria-label="Sign up form">
+            <form onSubmit={signIn} className="mt-5" aria-label="Sign up form">
               {error && <p style={{ color: "red" }}>{error}</p>}
               {success && <p style={{ color: "green" }}>{success}</p>}
               <div className="mb-[30px]">

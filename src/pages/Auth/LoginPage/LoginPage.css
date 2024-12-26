@@ -1,10 +1,13 @@
 .mid{
-    gap: 70px;
+    gap: 0px;
 }
 .rem p{
     font-size: 8px !important;
 }
 .banner img{
-    margin-left: -100px;
+    margin-left: -15px;
     margin-top: 10px;
+}
+.banner button{
+    margin-left: 90px;
 }
