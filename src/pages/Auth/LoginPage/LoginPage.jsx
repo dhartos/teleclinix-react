@@ -33,7 +33,7 @@ const LoginPage = ({ setLogin }) => {
       setError("All fields are required.");
       return;
     }
-
+  
     try {
       const formData = new FormData()
 
@@ -44,8 +44,20 @@ const LoginPage = ({ setLogin }) => {
       formData.append("client_id", "string")
       formData.append("client_secret", "string")
 
+    //   const body = {
+    //     grant_type: "password",
+    //     username: email,
+    //     password: password,
+    //     scope: "",
+    //     client_id: "string",
+    //     client_secret: "string"
+    // }
+
       const response = await fetch('https://backend-a25w.onrender.com/api/auth/login', {
         method: 'POST',
+      //    headers: {
+      //    "Content-Type": "application/json"
+      // },
         body: formData
       });
 
