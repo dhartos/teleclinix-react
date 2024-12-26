@@ -106,7 +106,8 @@ const RegisterPage = () => {
             <img src={banner}
               alt='banner promoting TeleClinix services'
               width={350}
-              height={390} />
+              height={390} 
+              className='banner m-[30px]' />
             <Link to='/'>
               <button
                 className="font-medium text-2xl mt-4 border rounded-lg p-2 w-50"

@@ -108,22 +108,23 @@ const LoginPage = ({ setLogin }) => {
           transition: 'background-color 0.3s ease',
         }}
       >
-        <div className="mid d-flex flex-wrap align-items-center justify-content-center login-container mt-5 mb-2">
-          <div className=" banner align-items-center justify-content-center m-5 w-25">
-            <img src={banner}
-              alt='banner promoting TeleClinix services'
-              width={350}
-              height={390} />
-            <Link to='/authentication/register'>
-              <button
-                className="font-medium text-2xl mt-4 border rounded-lg p-2 "
-                style={{ borderColor: '#1F0066', color: '#1F0066' }}
-                aria-label="Already have an account? Sign in"
-              >
-                No account? SignUp
-              </button>
-            </Link>
-          </div>
+      <div className="mid d-flex flex-wrap align-items-center justify-content-center login-container mt-5 mb-2">
+      <div className=" banner align-items-center justify-content-center w-25">
+        <img src={banner}
+        alt='banner promoting TeleClinix services'
+         width={350} 
+         height={390}
+         className='banner m-[30px]'/>
+         <Link to='/authentication/register'>
+         <button
+            className="font-medium text-2xl mt-4 border rounded-lg p-2 "
+            style={{ borderColor: '#1F0066', color: '#1F0066' }}
+            aria-label="Already have an account? Sign in"
+          >
+               No account? SignUp
+          </button>
+          </Link>
+        </div>
           <div className="flex-1 m-5">
             <h1
               className='font-semibold text-3xl mt-5 mb-[15px]'
