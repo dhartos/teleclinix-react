@@ -25,9 +25,9 @@ function Layout() {
 
     const authRoutes = ['/', '/authentication/register', '/authentication/verify'];
 
-    if (login && authRoutes.includes(location.pathname)) {
-        return <Navigate to="/patient-dashboard" replace />;
-    }
+    // if (login && authRoutes.includes(location.pathname)) {
+    //     return <Navigate to="/patient-dashboard" replace />;
+    // }
 
     if (!login && !authRoutes.includes(location.pathname)) {
         return <Navigate to="/" replace />;

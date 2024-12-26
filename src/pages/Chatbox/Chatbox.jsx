@@ -32,7 +32,7 @@ function Chatbox() {
   };
   return (
     <div className="container-fluid p-0 d-flex justify-content-">
-      <SideBarPatient />
+      {/* <SideBarPatient /> */}
       <div className="interface m-5  w-100">
         <div className="chatuser d-flex justify-content-between align-items-center">
           <p className="p-2">Name:</p>
