@@ -128,32 +128,32 @@ const RegisterPage = () => {
               {success && <p style={{ color: "green" }}>{success}</p>}
               <div className="mb-[30px]">
                 <input
-                        className='p-2'
-                        type='email'
-                        label="Email Address"
-                        placeholder="Email Address"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                  className='p-2'
+                  type='email'
+                  label="Email Address"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-[12px]">
                 <input
-                   className='p-2'
-                   type='password'
-                   label="Password"
-                   placeholder="Password"
-                   value={password}
-                   onChange={(e) => setPassword(e.target.value)}
+                  className='p-2'
+                  type='password'
+                  label="Password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className=''>
                 <input
-                     className='p-2'
-                     type='password'
-                     label="Confirm Password"
-                     placeholder="Confirm Password"
-                     value={confirmPassword}
-                     onChange={(e) => setConfirmPassword(e.target.value)}
+                  className='p-2'
+                  type='password'
+                  label="Confirm Password"
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                 />
                 <p className='mt-[20px]'>Password must be the same as above</p>
               </div>
