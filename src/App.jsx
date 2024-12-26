@@ -23,12 +23,10 @@ function Layout() {
     const location = useLocation();
     // const [login, setLogin] = useState(false)
     const [login, setLogin] = useState(() => {
-        // Retrieve login state from localStorage on initial load
         return JSON.parse(localStorage.getItem('login')) || false;
     });
 
     useEffect(() => {
-        // Save login state to localStorage whenever it changes
         localStorage.setItem('login', JSON.stringify(login));
     }, [login]);
 
