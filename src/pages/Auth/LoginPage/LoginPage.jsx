@@ -44,7 +44,7 @@ const LoginPage = ({ setLogin }) => {
       formData.append("client_id", "string")
       formData.append("client_secret", "string")
 
-      const response = await fetch('https://teleclinix-backend-api.onrender.com/api/login', {
+      const response = await fetch('https://backend-a25w.onrender.com/api/auth/login', {
         method: 'POST',
         body: formData
       });

@@ -32,6 +32,11 @@ const RegisterPage = () => {
       return;
     }
 
+    if (password.length < 8 || confirmPassword.length < 8) {
+      setError("Password and Confirm Password must be at least 8 characters long.");
+      return;
+    }
+
     if (password !== confirmPassword) {
       setError("Passwords do not match.");
       return;
@@ -41,7 +46,7 @@ const RegisterPage = () => {
       setError("");
       setSuccess("");
 
-      const response = await fetch("https://teleclinix-backend-api.onrender.com/api/register",
+      const response = await fetch("https://backend-a25w.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -61,15 +66,13 @@ const RegisterPage = () => {
 
       if (response.ok) {
         setSuccess("Registration successful! Please log in.");
+        navigate("/authentication/verify", { state: { email: email } });
       } else {
         setError(data.message || "Registration failed.");
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
     }
-
-    // Redirect to verification page after successful registration
-    navigate('/authentication/verify', { state: { email: email } });
 
   };
 

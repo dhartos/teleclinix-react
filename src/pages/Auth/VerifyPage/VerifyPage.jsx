@@ -37,18 +37,17 @@ const VerifyPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Ensure email is retrieved correctly
         if (!email) {
             alert("Email is missing. Please try again.");
             return;
         }
         try {
-            const response = await fetch('https://teleclinix-backend-api.onrender.com/verify-token', {
+            const response = await fetch('https://backend-a25w.onrender.com/api/auth/verify-token', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ token: code, email }),
+                body: JSON.stringify({ token: code }),
             });
 
             if (!response.ok) {
