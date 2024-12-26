@@ -14,61 +14,61 @@ const VerifyPage = () => {
     const [verificationCode, setVerificationCode] = useState(['', '', '', '', '', '']);
     const navigate = useNavigate();
 
-        // Handle input changes
-        const handleInputChange = (e, index) => {
+    // Handle input changes
+    const handleInputChange = (e, index) => {
         const input = e.target
-            const newCode = [...verificationCode];
-            newCode[index] = input.value;
-            setVerificationCode(newCode);
+        const newCode = [...verificationCode];
+        newCode[index] = input.value;
+        setVerificationCode(newCode);
 
 
 
-            const maxLength = input.maxLength;
-            if (input.value.length >= maxLength) {
-              const nextInput = input.nextElementSibling;
-              if (nextInput && nextInput.tagName === "INPUT") {
+        const maxLength = input.maxLength;
+        if (input.value.length >= maxLength) {
+            const nextInput = input.nextElementSibling;
+            if (nextInput && nextInput.tagName === "INPUT") {
                 nextInput.focus();
-              }
             }
-        };
-    
-        // Combine the code into a single string
-        const code = verificationCode.join('');
-    
-        const handleSubmit = async (e) => {
-            e.preventDefault();
-            // Ensure email is retrieved correctly
-            if (!email) {
-                alert("Email is missing. Please try again.");
-                return;
+        }
+    };
+
+    // Combine the code into a single string
+    const code = verificationCode.join('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // Ensure email is retrieved correctly
+        if (!email) {
+            alert("Email is missing. Please try again.");
+            return;
+        }
+        try {
+            const response = await fetch('https://teleclinix-backend-api.onrender.com/verify-token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ token: code, email }),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to verify token');
             }
-            try {
-                const response = await fetch('https://teleclinix-backend-api.onrender.com/verify-token', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ token: code, email }), 
-                });
-    
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.message || 'Failed to verify token');
-                }
-    
-                const data = await response.json();
-                console.log('Token verified:', data);
-    
-                // If the token is verified, redirect to login
-                navigate('/authentication/login');
-            } catch (error) {
-                console.error('Error verifying token:', error);
-                alert('Invalid verification code. Please try again.');
-            }
-        };
+
+            const data = await response.json();
+            console.log('Token verified:', data);
+
+            // If the token is verified, redirect to login
+            navigate('/authentication/login');
+        } catch (error) {
+            console.error('Error verifying token:', error);
+            alert('Invalid verification code. Please try again.');
+        }
+    };
 
 
-            // Handle request to get another token
+    // Handle request to get another token
     const handleRequestCode = async () => {
         try {
             if (!email) {
@@ -90,7 +90,7 @@ const VerifyPage = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email}),
+                body: JSON.stringify({ email }),
             });
 
             if (!response.ok) {
@@ -113,10 +113,10 @@ const VerifyPage = () => {
         const input = e.target;
         const maxLength = input.getAttribute('maxLength');
         if (input.value.length >= maxLength) {
-          const nextInput = input.nextElementSibling;
-          if (nextInput && nextInput.tagName === "INPUT") {
-            nextInput.focus();
-          }
+            const nextInput = input.nextElementSibling;
+            if (nextInput && nextInput.tagName === "INPUT") {
+                nextInput.focus();
+            }
         }
     };
 
@@ -126,46 +126,46 @@ const VerifyPage = () => {
             <div className="d-flex justify-content-between align-items-center">
                 <h1 className='mt-3 p-3'>TeleClinix</h1>
                 <img src={teleclinixlogo} alt="logo" />
-        </div>
+            </div>
 
-        <div className="d-flex flex-column align-items-center justify-content-center login-container m-5  p-3">
+            <div className="d-flex flex-column align-items-center justify-content-center login-container m-5  p-3">
                 <div className="align-items-center  text-align-center">
                     <h2 className=""> Check Your Email: Enter Your Verification Code.</h2>
                     <p><i className='mt-4 mb-4'>We've sent a verification code to your registered email. Please enter the code below to verify your account and proceed.</i></p>
                 </div>
                 <div className="p-4 shadow verify-box">
-                 <div className='mx-auto ml-5'>
-                  <label htmlFor="heading">Verification code</label>
-                </div>
-                <div className='d-flex mb-4'>
-                <input type="text" maxLength={1} className='form-control verification-input' id='input0' value={verificationCode[0]} onInput={(e) => handleInputChange(e, 0)}
-              />
-                <input type="text" maxLength={1} className='form-control verification-input' id='input1' value={verificationCode[1]} onInput={(e) => handleInputChange(e, 1)}
-              />
-                <input type="text" maxLength={1} className='form-control verification-input' id='input2' value={verificationCode[2]} onInput={(e) => handleInputChange(e, 2)}
-              />
-                <input type="text" maxLength={1} className='form-control verification-input' id='input3' value={verificationCode[3]} onInput={(e) => handleInputChange(e, 3)}
-              />
-                <input type="text" maxLength={1} className='form-control verification-input' id='input4' value={verificationCode[4]} onInput={(e) => handleInputChange(e, 4)}
-              />
-                <input type="text" maxLength={1} className='form-control verification-input' id='input5' value={verificationCode[5]} onInput={(e) => handleInputChange(e, 5)}
-              />
-            </div>
+                    <div className='mx-auto ml-5'>
+                        <label htmlFor="heading">Verification code</label>
+                    </div>
+                    <div className='d-flex mb-4'>
+                        <input type="text" maxLength={1} className='form-control verification-input' id='input0' value={verificationCode[0]} onInput={(e) => handleInputChange(e, 0)}
+                        />
+                        <input type="text" maxLength={1} className='form-control verification-input' id='input1' value={verificationCode[1]} onInput={(e) => handleInputChange(e, 1)}
+                        />
+                        <input type="text" maxLength={1} className='form-control verification-input' id='input2' value={verificationCode[2]} onInput={(e) => handleInputChange(e, 2)}
+                        />
+                        <input type="text" maxLength={1} className='form-control verification-input' id='input3' value={verificationCode[3]} onInput={(e) => handleInputChange(e, 3)}
+                        />
+                        <input type="text" maxLength={1} className='form-control verification-input' id='input4' value={verificationCode[4]} onInput={(e) => handleInputChange(e, 4)}
+                        />
+                        <input type="text" maxLength={1} className='form-control verification-input' id='input5' value={verificationCode[5]} onInput={(e) => handleInputChange(e, 5)}
+                        />
+                    </div>
 
                 </div>
                 <div className="w-25 mt-4 d-flex align-items-center justify-content-center">
                     <button onClick={handleSubmit} className=''>Submit</button>
                 </div>
-                    <div className="text-center mt-5 mb-2">
+                <div className="text-center mt-5 mb-2">
                     <span>Didn't get a code? </span>
 
                     {/* Call handleRequestCode when the user clicks this link */}
                     <Link to="#" onClick={handleRequestCode} className='text-primary'>Request another code.</Link>
                 </div>
             </div>
-            </div>
+        </div>
 
     )
-    }
-    
-    export default VerifyPage
+}
+
+export default VerifyPage

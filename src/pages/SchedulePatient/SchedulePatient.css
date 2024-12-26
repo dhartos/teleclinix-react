@@ -1,76 +1,81 @@
-.appointment-form{
+.appointment-form {
   gap: 30px;
 }
-  
-  .header-card {
-    background-color: #eae6f2;
-    border-radius: 10px;
-  }
-  
-  .header-card h2 {
-    font-size: 2em;
-    color: #3b0054;
-  }
-  
-  .header-card a {
-    color: #1F0066;
-    text-decoration: underline;
-  }
-  
-  /* Form Styles */
-  .appointment-form {
-    display: flex;
 
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  .form-group span{
-    font-size: 12px;
-    color: #1F0066;
-  }
-  input, select, button {
-    width: 100%;
-    margin-top: 5px;
-    border: 1px solid #1F0066;
-    border-radius: 5px;
-  }
-  
-  .date-options button,
-  .time-options button {
-    display: inline-block;
-    margin-right: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-    cursor: pointer;
-    color: #000;
-  }
-  
-  .date-options button:hover,
-  .time-options button:hover, .cancel:hover {
-    background-color: #663ec4;
-    color: #f5f5f5;
-    border: none;
-  }
-  
-  /* Action Buttons */
-  .form-actions {
-    margin-top: 20px;
-    text-align: right;
-    gap: 20px;
-  }
-  
-  button.cancel {
-    background-color: transparent;
-    border: 1px solid #1F0066;
-    border-radius: 8px;
-    color: #333;
-  }
-  
-  button.book {
-    background-color: #1F0066;
-    color: #fff;
-    border-radius: 8px;
-  }
+.header-card {
+  background-color: #eae6f2;
+  border-radius: 10px;
+}
+
+.header-card h2 {
+  font-size: 2em;
+  color: #3b0054;
+}
+
+.header-card a {
+  color: #1F0066;
+  text-decoration: underline;
+}
+
+/* Form Styles */
+.appointment-form {
+  display: flex;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group span {
+  font-size: 12px;
+  color: #1F0066;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #1F0066;
+  border-radius: 5px;
+}
+
+.date-options button,
+.time-options button {
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  color: #000;
+}
+
+.date-options button:hover,
+.time-options button:hover,
+.cancel:hover {
+  background-color: #663ec4;
+  color: #f5f5f5;
+  border: none;
+}
+
+/* Action Buttons */
+.form-actions {
+  margin-top: 20px;
+  text-align: right;
+  gap: 20px;
+}
+
+button.cancel {
+  background-color: transparent;
+  border: 1px solid #1F0066;
+  border-radius: 8px;
+  color: #333;
+}
+
+button.book {
+  background-color: #1F0066;
+  color: #fff;
+  border-radius: 8px;
+}

@@ -15,9 +15,9 @@ const MedicalLicenceInput = ({
     return (
         <div className="relative w-full mt-2">
             {/* Label for the input */}
-            <label 
+            <label
                 className={`absolute left-10 transition-all duration-200 ease-in-out 
-                ${medicalLicence ? 'top-[-10px] text-[#1F0066] text-sm' : 'top-3 text-gray-700'}`} 
+                ${medicalLicence ? 'top-[-10px] text-[#1F0066] text-sm' : 'top-3 text-gray-700'}`}
                 htmlFor="medicalLicence" // Match the id of the input
                 aria-labelledby="medicalLicence-label" // Update for clarity
             >
@@ -34,7 +34,7 @@ const MedicalLicenceInput = ({
                 >
                     <Image src={Icon} alt="medicalLicence Icon" width={24} height={24} /> {/* Render the icon as an image */}
                 </span>
-                
+
                 {/* Input field */}
                 <input
                     type="number" // Correct type for the input
