@@ -70,11 +70,13 @@ const LoginPage = ({ setLogin }) => {
 
       setEmail('');
       setPassword('');
+      setLogin(true);
       setSuccess('Login successful!');
       setError('')
       navigate('/patient-dashboard')
     } catch (error) {
       setError(error.message || 'Something went wrong. Please try again.');
+      setLogin(false);
       setSuccess('');
     } finally {
       setLoading(false)

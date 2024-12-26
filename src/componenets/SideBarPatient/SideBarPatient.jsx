@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import './SideBarPatient.css'
 import teleclinix from '../../../src/assets/teleclinixlogo.svg'
 
-function SideBarPatient() {
+function SideBarPatient({ setLogin }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -29,6 +29,10 @@ function SideBarPatient() {
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen)
+    }
+
+    const handleSignout = () => {
+        setLogin(false);
     }
 
     return (
@@ -95,7 +99,7 @@ function SideBarPatient() {
                         </div>
                         <div className="menulist d-flex">
                             {/* <img src="" alt="icon" /> */}
-                            <p>↩️ <span>Sign-Out</span></p>
+                            <p onClick={handleSignout}>↩️ <span>Sign-Out</span></p>
                         </div>
                     </div>
                 </div>

@@ -11,25 +11,43 @@ import Chatbox from './pages/Chatbox/Chatbox';
 import Videobox from './pages/Videobox/Videobox'
 import VerifyPage from './pages/Auth/VerifyPage/VerifyPage';
 
-
-function App() {
-    const [login, setLogin] = useState(false)
-
+const App = () => {
     return (
         <Router>
-            <div className='d-flex'>
-                <SideBarPatient />
-                <Routes>
-                    <Route path='/' element={<LoginPage setLogin={setLogin} />} />
-                    <Route path='/authentication/register' element={<RegisterPage />} />
-                    <Route path='/authentication/verify' element={<VerifyPage />} />
-                    <Route path='/patient-dashboard' element={<PatientDashboard />} />
-                    <Route path='/schedule-patient' element={<SchedulePatient />} />
-                    <Route path='/chatbox-patient' element={<Chatbox />} />
-                    <Route path='/videobox-patient' element={<Videobox />} />
-                </Routes>
-            </div>
+            <Layout />
         </Router>
+    );
+};
+
+function Layout() {
+    const location = useLocation();
+    const [login, setLogin] = useState(false)
+
+    const authRoutes = ['/', '/authentication/register', '/authentication/verify'];
+
+    if (login && authRoutes.includes(location.pathname)) {
+        return <Navigate to="/patient-dashboard" replace />;
+    }
+
+    if (!login && !authRoutes.includes(location.pathname)) {
+        return <Navigate to="/" replace />;
+    }
+
+    const shouldShowSidebar = !authRoutes.includes(location.pathname);
+
+    return (
+        <div className='d-flex'>
+            {shouldShowSidebar && <SideBarPatient setLogin={setLogin} />}
+            <Routes>
+                <Route path='/' element={<LoginPage setLogin={setLogin} />} />
+                <Route path='/authentication/register' element={<RegisterPage />} />
+                <Route path='/authentication/verify' element={<VerifyPage />} />
+                <Route path='/patient-dashboard' element={<PatientDashboard />} />
+                <Route path='/schedule-patient' element={<SchedulePatient />} />
+                <Route path='/chatbox-patient' element={<Chatbox />} />
+                <Route path='/videobox-patient' element={<Videobox />} />
+            </Routes>
+        </div>
     )
 }
 
