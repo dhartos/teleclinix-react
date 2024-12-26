@@ -7,7 +7,7 @@ import SideBarPatient from "../../componenets/SideBarPatient/SideBarPatient";
 function Videobox() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const [videoCallActive, setVideoCallActive] = useState(false); 
+  const [videoCallActive, setVideoCallActive] = useState(false);
 
   // Handle message input with validation
   const handleMessageInput = (e) => {
@@ -39,7 +39,7 @@ function Videobox() {
 
   return (
     <div className="container-fluid p-0 d-flex">
-      <SideBarPatient />
+      {/* <SideBarPatient /> */}
       <div className="interface m-5 w-100">
         <div className="chatuser d-flex justify-content-between align-items-center">
           <p className="p-2">Name:</p>
@@ -55,9 +55,8 @@ function Videobox() {
               {messages.map((msg, index) => (
                 <div
                   key={index}
-                  className={`message mb-3 p-1 ${
-                    msg.sender === "user" ? "user" : "doctor"
-                  }`}
+                  className={`message mb-3 p-1 ${msg.sender === "user" ? "user" : "doctor"
+                    }`}
                 >
                   {msg.text}
                 </div>

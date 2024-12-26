@@ -33,38 +33,23 @@ const LoginPage = ({ setLogin }) => {
       setError("All fields are required.");
       return;
     }
-  
+
     try {
-      const formData = new FormData()
-
-      formData.append("grant_type", "password")
-      formData.append("username", email)
-      formData.append("password", password)
-      formData.append("scope", "")
-      formData.append("client_id", "string")
-      formData.append("client_secret", "string")
-
-    //   const body = {
-    //     grant_type: "password",
-    //     username: email,
-    //     password: password,
-    //     scope: "",
-    //     client_id: "string",
-    //     client_secret: "string"
-    // }
-
       const response = await fetch('https://backend-a25w.onrender.com/api/auth/login', {
         method: 'POST',
-      //    headers: {
-      //    "Content-Type": "application/json"
-      // },
-        body: formData
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email,
+          password
+        }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.detail || 'Network response was not ok');
+        setError(data.message || 'Network response was not ok');
         return;
       }
 
@@ -122,23 +107,23 @@ const LoginPage = ({ setLogin }) => {
           transition: 'background-color 0.3s ease',
         }}
       >
-      <div className="mid d-flex flex-wrap align-items-center justify-content-between login-container mt-5 mb-2">
-      <div className=" banner align-items-center justify-content-center w-25">
-        <img src={banner}
-        alt='banner promoting TeleClinix services'
-         width={350} 
-         height={390}
-         className='banne '/>
-         <Link to='/authentication/register'>
-         <button
-            className="font-medium text-2xl mt-4 border rounded-lg p-2 "
-            style={{ borderColor: '#1F0066', color: '#1F0066' }}
-            aria-label="Already have an account? Sign in"
-          >
-               No account? SignUp
-          </button>
-          </Link>
-        </div>
+        <div className="mid d-flex flex-wrap align-items-center justify-content-between login-container mt-5 mb-2">
+          <div className=" banner align-items-center justify-content-center w-25">
+            <img src={banner}
+              alt='banner promoting TeleClinix services'
+              width={350}
+              height={390}
+              className='banne ' />
+            <Link to='/authentication/register'>
+              <button
+                className="font-medium text-2xl mt-4 border rounded-lg p-2 "
+                style={{ borderColor: '#1F0066', color: '#1F0066' }}
+                aria-label="Already have an account? Sign in"
+              >
+                No account? SignUp
+              </button>
+            </Link>
+          </div>
           <div className="flex-1 m-5">
             <h1
               className='font-semibold text-3xl mt-5 mb-[15px]'
