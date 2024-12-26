@@ -11,7 +11,7 @@ function PatientDashboard () {
 
     return (
         <div className="container-fluid p-0 d-flex justify-content-between">
-             <SideBarPatient/>
+             <SideBarPatient />
             <div className="dashboard m-2 w-100 align-items-center">
                 {/* <SideBarPatient/> */}
                 <div className="leftdash mt-5">
