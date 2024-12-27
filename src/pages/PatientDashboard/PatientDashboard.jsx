@@ -14,9 +14,9 @@ const PatientDashboard = () => {
 
     return (
         <div className="container-fluid p-0">
-            <div className="dashboard m-5 w-100 align-items-center">
-                <div className="leftdash mt-5">
-                    <div className=" top-leftdash mb-3 d-flex justify-content-center align-items-center">
+            <div className="dashboard m-5 align-items-center">
+                <div className="">
+                    <div className=" top-leftdash mb-3 d-flex flex-wrap justify-content-center">
                         <div className="topright-leftdash">
                             <div className="row1 d-flex justify-content-between ">
                                 <div className="image-container">
@@ -69,25 +69,24 @@ const PatientDashboard = () => {
                                         <p>Patient; to be generated</p>
                                     </div>
                                 </div>
-                                <div className="details p-1">
-                                    <p>Details</p>
-                                    <div className="horizontal line"></div>
-                                    <div className="info d-flex justify-content-center align-items-center">
-                                        <p className="p-1">Age</p>
+                                <div className="details m-2">
+                                    <h4>Details</h4>
+                                    <div className="det d-flex justify-content-between mb-2">
+                                        <p className="">Age</p>
                                         <input type="number" placeholder="0yrs"
-                                            id="age" className="p-1" />
+                                        id="age" className="p-1 w-50" />
                                     </div>
-                                    <div className="info d-flex justify-content-center">
+                                    <div className="det d-flex justify-content-between">
                                         <p>Blood Group</p>
-                                        <input type="text" placeholder="O+" className="p-1" />
+                                        <input type="text" placeholder="O+" className="p-1 w-50" />
                                     </div>
-                                    <div className="info d-flex justify-content-center">
+                                    <div className="det d-flex justify-content-between">
                                         <p>Height (m)</p>
-                                        <input type="text" placeholder="0m" className="p-1" />
+                                        <input type="text" placeholder="0m" className="p-1 w-50" />
                                     </div>
-                                    <div className="info d-flex justify-content-center">
+                                    <div className="det d-flex justify-content-between">
                                         <p>Weight (kg)</p>
-                                        <input type="text" placeholder="Okg" className="p-1" />
+                                        <input type="text" placeholder="Okg" className="p-1 w-50" />
                                     </div>
                                 </div>
                             </div>
@@ -95,8 +94,8 @@ const PatientDashboard = () => {
                                 <h3>MY APPOINTMENTS</h3>
                                 <div className="appointment ">
                                     <p className="p-2">No appointments at the moment (You have 5 appointmnet); auto generate</p>
-                                    <div className="scheduled-appointment">
-                                        <p className="p-1">Schedule appointment/consultation will appear here; auto generate</p>
+                                    <div className="scheduled-appointment m-2">
+                                        <p className="p-2">Schedule appointment/consultation will appear here; auto generate</p>
                                     </div>
                                 </div>
                             </div>

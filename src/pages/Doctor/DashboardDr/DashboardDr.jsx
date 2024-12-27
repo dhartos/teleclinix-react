@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 
 //style
@@ -13,12 +13,48 @@ const DashboardDr = () => {
       setDate(newDate);
       console.log("Selected Date:", newDate);
     };
+    const [currentDateTime, setCurrentDateTime] = useState(new Date());
+    
+    
+    useEffect (() => {
+        const interval = setInterval(() => {
+          setCurrentDateTime(new Date());
+        }, 1000);
+        return () => clearInterval(interval); 
+    }, []);
+
+    const data = [
+        {
+          name: "John Doe",
+          date: "2024-12-20",
+          time: "10:00 AM",
+          appointments: 2,
+          healthIssue: "Flu",
+          status: "Completed",
+        },
+        {
+          name: "Jane Smith",
+          date: "2024-12-21",
+          time: "11:30 AM",
+          appointments: 1,
+          healthIssue: "Migraine",
+          status: "Pending",
+        },
+        {
+          name: "Mark Taylor",
+          date: "2024-12-22",
+          time: "2:00 PM",
+          appointments: 3,
+          healthIssue: "Back Pain",
+          status: "In Progress",
+        },
+      ];
 
     return (
         <div className="container-fluid p-0">
             <div className="row">
-            <div className="dashboard m-5 align-items-center">
-            <div className="patient-activity d-flex flex-wrap justify-content-between p-5">
+            <div className="dashboard align-items-center">
+            <div className="patient-activity d-flex flex-wrap justify-content-between m-5">
                         <div className="count mb-3 d-flex">
                             <div className="countdp">
                                 <img src="" alt="img" className=" pic my-3" />
@@ -47,7 +83,7 @@ const DashboardDr = () => {
                             </div>
                         </div>
                     </div>
-                <div className="activity d-flex flex-wrap justify-content-center mt-5">
+                <div className="activity d-flex flex-wrap justify-content-center m-5">
                 <div>
                 <h3>Calendar</h3>
                 <Calendar onChange={handleDateChange} value={date} />
@@ -78,87 +114,48 @@ const DashboardDr = () => {
             </div>
         </div>
     <div className="leftdash m-5">
-        <div className="top-leftdash mb-3 d-flex justify-content-center align-items-center">
-            <div className="topright-leftdash">
-                <div className="row1 d-flex justify-content-between ">
-                    <div className="image-container">
-                        <img src='{}' height={'250px'} alt="dr image" className="pl-2" />
-                    </div>
-                    <div className="row1-text">
-                        <h3 className="m-2">Hi No Trouble ; to be generated</h3>
-                        <p className="p-2">Find a Doctor and make an appointment Online</p>
-                        <div className="goals">
-                            <h3 className="p-2">Keep these goals in mind</h3>
-                            <div className="daily p-2">
-                                <ul>
-                                    <li>Improve wellness and mood</li>
-                                    <li>Exercise twice a day</li>
-                                    <li>Eat healthier</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="date mt-3">
-                    <h3>Date: November 03, 2024</h3>
-                </div>
-                <div className="booking mt-3 d-flex">
-                    <div className="booking-text m-3">
-                        <h3>Book an Appointment</h3>
-                        <p className="text-wrap mt-3 p-2">Book your medical appointment conveniently and quickly through our user friendly web app. <br />
-                            Schedule your appointment now and get the care you need, when you need it.</p>
-                            <button type="submit">Schedule an appointment</button>
-                        
-                    </div>
-                    <div className="image-containe">
-                        <img src='{}' alt="dr image" width={'150px'} height={'240px'} />
-                    </div>
-                </div>
-            </div>
-            <div className="topleft-leftdash">
-                <div className="column1 ">
-                    <div className="dp m-4">
-                        <img src='{}' alt="patient image or dummy" />
-                        <div className="name align-items-center">
-                            <h3>No Trouble ; to be generated</h3>
-                            <p>Patient; to be generated</p>
-                        </div>
-                    </div>
-                    <div className="details p-1">
-                        <p>Details</p>
-                        <div className="horizontal line"></div>
-                        <div className="info d-flex justify-content-center align-items-center">
-                            <p className="p-1">Age</p>
-                            <input type="number" placeholder="0yrs"
-                                id="age" className="p-1" />
-                        </div>
-                        <div className="info d-flex justify-content-center">
-                            <p>Blood Group</p>
-                            <input type="text" placeholder="O+" className="p-1" />
-                        </div>
-                        <div className="info d-flex justify-content-center">
-                            <p>Height (m)</p>
-                            <input type="text" placeholder="0m" className="p-1" />
-                        </div>
-                        <div className="info d-flex justify-content-center">
-                            <p>Weight (kg)</p>
-                            <input type="text" placeholder="Okg" className="p-1" />
-                        </div>
-                    </div>
-                </div>
-                <div className="column2 mt-3">
-                    <h3>MY APPOINTMENTS</h3>
-                    <div className="appointment ">
-                        <p className="p-2">No appointments at the moment (You have 5 appointmnet); auto generate</p>
-                        <div className="scheduled-appointment">
-                            <p className="p-1">Schedule appointment/consultation will appear here; auto generate</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div className="d-flex ">
+      <h3>Today's date and time:</h3>
+      <p className="p-1">{currentDateTime.toLocaleString()}</p>
+    </div>
 
+        <div className="appointment">
 
+            <div className="d-flex justify-content-between m-2">
+            <h3 className="m-2">Upcoming Appointments</h3>
+            <p>View all</p>
+            </div>
+
+             <div className="table-container m-1">
+                <table className="table" border="1" style={{ width: "100%", textAlign: "left", borderCollapse: "collapse" }}>
+                    <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Appointments</th>
+                        <th>Health Issue</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {data.map((row, index) => (
+                        <tr key={index}>
+                        <td>{row.name}</td>
+                        <td>{row.date}</td>
+                        <td>{row.time}</td>
+                        <td>{row.appointments}</td>
+                        <td>{row.healthIssue}</td>
+                        <td>{row.status}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                <div className="last m-5">
+                    <h1>Health is wealth</h1>
                 </div>
             </div>
         </div>
