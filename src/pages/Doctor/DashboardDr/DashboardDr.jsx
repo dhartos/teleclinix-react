@@ -84,7 +84,7 @@ const DashboardDr = () => {
                         </div>
                     </div>
                 <div className="activity d-flex flex-wrap justify-content-center m-5">
-                <div>
+                <div className="calendar-container">
                 <h3>Calendar</h3>
                 <Calendar onChange={handleDateChange} value={date} />
                 <p>Selected Date: {date.toDateString()}</p>
@@ -126,8 +126,8 @@ const DashboardDr = () => {
             <p>View all</p>
             </div>
 
-             <div className="table-container m-1">
-                <table className="table" border="1" style={{ width: "100%", textAlign: "left", borderCollapse: "collapse" }}>
+             <div className="table-responsive m-1">
+                <table className="table table-bordered" border="1" style={{ width: "100%", textAlign: "left", borderCollapse: "collapse" }}>
                     <thead>
                     <tr>
                         <th>Patient Name</th>

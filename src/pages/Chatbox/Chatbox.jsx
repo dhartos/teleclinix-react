@@ -31,16 +31,18 @@ function Chatbox() {
     setMessage("");
   };
   return (
-    <div className="container-fluid p-0 d-flex justify-content-">
-      {/* <SideBarPatient /> */}
-      <div className="interface m-5  w-100">
-        <div className="chatuser d-flex justify-content-between align-items-center">
+    <div className="container-fluid p-0 ">
+     <div className="m-3">
+      <div className="interface mt-5">
+        <div className="chatuser d-flex justify-content-between align-items-center m-2">
           <p className="p-2">Name:</p>
+          <div className="btn m-2">
           <NavLink to='/videobox-patient'>
-            <button className="btn m-2 ">
+            <button className="btn">
               Switch to Video Call
             </button>
           </NavLink>
+          </div>
         </div>
         <div className="chat-container mt-5">
           <div className="messages m-2 ">
@@ -103,6 +105,7 @@ function Chatbox() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
