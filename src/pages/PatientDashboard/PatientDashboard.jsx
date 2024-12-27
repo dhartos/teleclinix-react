@@ -63,7 +63,6 @@ const PatientDashboard = () => {
                         <div className="topleft-leftdash">
                             <div className="column1 ">
                                 <div className="dp m-4">
-                                    <img src='{}' alt="patient image or dummy" />
                                     <div className="name align-items-center">
                                         <h3>No Trouble ; to be generated</h3>
                                         <p>Patient; to be generated</p>
@@ -88,6 +87,9 @@ const PatientDashboard = () => {
                                         <p>Weight (kg)</p>
                                         <input type="text" placeholder="Okg" className="p-1 w-50" />
                                     </div>
+                                </div>
+                                <div>
+                                    <button type="submit" className="m-2 w-25">Save</button>
                                 </div>
                             </div>
                             <div className="column2 mt-3">

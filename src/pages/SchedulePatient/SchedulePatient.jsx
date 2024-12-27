@@ -9,10 +9,29 @@ import "react-datepicker/dist/react-datepicker.css";
 function SchedulePatient() {
   const [dateTime, setDateTime] = useState(null);
 
+  const [file, setFile] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleFileUpload = (e) => {
+    const uploadedFile = e.target.files[0];
+    if (uploadedFile) {
+      const fileDate = new Date(uploadedFile.lastModified);
+      const currentDate = new Date();
+      const oneMonthAgo = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
+
+      if (fileDate >= oneMonthAgo) {
+        setFile(uploadedFile);
+        setErrorMessage("");
+      } else {
+        setFile(null);
+        setErrorMessage("The uploaded file must not be older than a month.");
+      }
+    }
+  };
+
   return (
     <div className="container-fluid p-0">
       <div className="main d-flex">
-        {/* <SideBarPatient/> */}
         <div className="book m-5">
           <h3>Book an Appointment</h3>
           <div className="appointment-header mb-3 w-25">
@@ -40,7 +59,7 @@ function SchedulePatient() {
                 </div>
                 <div className="form-group">
                   <label>Email Address</label>
-                  <input type="text" placeholder="Consultation Only" className="p-2" disabled />
+                  <input type="text" placeholder="Email Address" className="p-2" disabled />
                 </div>
                 <div className="form-group">
                   <label>Show Times For</label>
@@ -66,6 +85,23 @@ function SchedulePatient() {
               </div>
 
               <div className="right-section">
+              <div className="form-group">
+              <label>Upload Past Medical Results</label>
+              <input
+                type="file"
+                className="p-2"
+                onChange={handleFileUpload}
+                accept=".pdf,.jpg,.jpeg,.png"
+              />
+              {file && (
+                <p style={{ color: "green" }}>
+                  File "{file.name}" uploaded successfully!
+                </p>
+              )}
+              {errorMessage && (
+                <p style={{ color: "red" }}>{errorMessage}</p>
+              )}
+            </div>
                 <div className="form-group">
                   <label>Doctors</label>
                   <select className="p-2">
@@ -73,8 +109,6 @@ function SchedulePatient() {
                   </select>
                 </div>
                 <div className="form-group">
-                  <label>Date</label>
-                  <input type="text" placeholder="Type date (dd/mm/yy)" className="p-2" />
                   <div className="date-options">
                   <h3 className="mt-5">Select Date and Time</h3>
                     <p >Kindly select your preferred date and time.</p>
@@ -94,7 +128,6 @@ function SchedulePatient() {
                       <div className="form-group">
                         <label>Gender</label>
                         <div className="radio-group d-flex">
-                          <label><input type="radio" name="gender" value="All" /> All</label>
                           <label><input type="radio" name="gender" value="Female" /> Female</label>
                           <label><input type="radio" name="gender" value="Male" /> Male</label>
                         </div>
