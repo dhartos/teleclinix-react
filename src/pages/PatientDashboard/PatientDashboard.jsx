@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import DatePicker from "react-datepicker";
 
 //style
 import './PatientDashboard.css'
-import SideBarPatient from '../../componenets/SideBarPatient/SideBarPatient';
+import "react-datepicker/dist/react-datepicker.css"; 
 import topleft from '../../../src/assets/topleft.svg';
 import bookdp from '../../../src/assets/bookdp.svg';
 
-function PatientDashboard() {
+const PatientDashboard = () => {
+
+    const [selectedDate, setSelectedDate] = useState(null);
 
     return (
         <div className="container-fluid p-0">
-            {/* <SideBarPatient/> */}
             <div className="dashboard m-5 w-100 align-items-center">
-                {/* <SideBarPatient/> */}
                 <div className="leftdash mt-5">
                     <div className=" top-leftdash mb-3 d-flex justify-content-center align-items-center">
                         <div className="topright-leftdash">
@@ -37,7 +38,13 @@ function PatientDashboard() {
                                 </div>
                             </div>
                             <div className="date mt-3">
-                                <h3>Date: November 03, 2024</h3>
+                            <h1>Today's Date</h1>
+                            <DatePicker
+                                selected={selectedDate}
+                                onChange={(date) => setSelectedDate(date)}
+                                placeholderText="Select a date"
+                            />
+                            {selectedDate && <p>Selected Date: {selectedDate.toDateString()}</p>}
                             </div>
                             <div className="booking mt-3 d-flex">
                                 <div className="booking-text m-3">
