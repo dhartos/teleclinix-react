@@ -1,5 +1,6 @@
 .left{
-    width: 60%;
+    /* outline: 2px solid red; */
+    width: 100%;
 }
 
 .popup-overlay {

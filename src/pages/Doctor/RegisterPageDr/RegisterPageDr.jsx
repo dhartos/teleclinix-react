@@ -55,16 +55,16 @@ const RegisterPageDr = () => {
     generateOptions();
   }, []);
 
-    const handleSelectOption = (value) => {
-      if (!selectedAvailability.includes(value)) {
-        setSelectedAvailability([...selectedAvailability, value]);
-      }
-      setIsDropdownOpen(false);
-    };
-  
-    const handleRemoveAvailability = (value) => {
-      setSelectedAvailability(selectedAvailability.filter(item => item !== value));
-    };
+  const handleSelectOption = (value) => {
+    if (!selectedAvailability.includes(value)) {
+      setSelectedAvailability([...selectedAvailability, value]);
+    }
+    setIsDropdownOpen(false);
+  };
+
+  const handleRemoveAvailability = (value) => {
+    setSelectedAvailability(selectedAvailability.filter(item => item !== value));
+  };
 
   const registerDoctor = async (e) => {
     e.preventDefault();
@@ -83,7 +83,7 @@ const RegisterPageDr = () => {
       setError('Passwords do not match.');
       return;
     }
-  
+
     const experience = parseInt(yearsOfExperience, 10);
     if (isNaN(experience)) {
       setError('Years of experience must be a valid number.');
@@ -129,7 +129,7 @@ const RegisterPageDr = () => {
     }
   };
 
-   const toggleDropdown = () => {
+  const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
@@ -181,7 +181,7 @@ const RegisterPageDr = () => {
               alt='banner promoting TeleClinix services'
               width={350}
               height={390} />
-            <Link to='/'>
+            <Link to='#'>
               <button
                 className="font-medium text-2xl mt-4 border rounded-lg p-2"
                 style={{ color: '#1F0066' }}
@@ -191,7 +191,7 @@ const RegisterPageDr = () => {
               </button>
             </Link>
           </div>
-          <div className='left flex-1 m-5 '>
+          <div className='w-100 left flex-1 m-5'>
             <h1 className='font-semibold text-3xl ' style={{ color: '#1F0066' }} >
               Welcome to TeleClinix</h1>
             <p className='font-medium text-xl line-height: 1.5rem' style={{ color: '#1F0066' }}>
@@ -248,8 +248,8 @@ const RegisterPageDr = () => {
                   placeholder="Years of Experience"
                   value={yearsOfExperience}
                   onChange={(e) => setYearsOfExperience(e.target.value)}
-                />          
-                
+                />
+
                 <div className="">
                   <label htmlFor="availability" style={{ display: 'block' }}>
                     Select Preferred Times:
@@ -273,7 +273,7 @@ const RegisterPageDr = () => {
                     )}
                   </div>
                 </div>
-                
+
                 <div className="selected-times mb-4">
                   {selectedAvailability.map((value) => {
                     const option = options.find(o => o.value === value);
@@ -328,7 +328,7 @@ const RegisterPageDr = () => {
             </form>
           </div>
 
-          
+
           {popupVisible && (
             <div className="popup-overlay">
               <div className="popup-content">
