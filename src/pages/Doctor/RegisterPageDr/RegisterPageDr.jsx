@@ -200,7 +200,7 @@ const RegisterPageDr = () => {
             <form onSubmit={registerDoctor} className="mt-5 mb-5" aria-label="Sign up form">
               {error && <p style={{ color: "red" }}>{error}</p>}
               {success && <p style={{ color: "green" }}>{success}</p>}
-              <div className='m-5'>
+              <div className='my-5 w-100'>
                 <input
                   className="p-2 mb-2"
                   type="email"
