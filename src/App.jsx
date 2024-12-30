@@ -32,7 +32,7 @@ function Layout() {
         localStorage.setItem('login', JSON.stringify(login));
     }, [login]);
 
-    const authRoutes = ['/', '/authentication/register', '/authentication/verify'];
+    const authRoutes = ['/', '/authentication/register', '/authentication/verify', '/authentication/register-doctor'];
 
     if (login && authRoutes.includes(location.pathname)) {
         return <Navigate to="/patient-dashboard" replace />;

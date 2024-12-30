@@ -108,12 +108,14 @@ const LoginPage = ({ setLogin }) => {
         }}
       >
         <div className="mid d-flex flex-wrap align-items-center justify-content-between login-container mt-5 mb-2">
-          <div className=" banner align-items-center justify-content-center w-25">
-            <img src={banner}
+          <div className="banner align-items-center justify-content-center w-25">
+            <img
+              src={banner}
               alt='banner promoting TeleClinix services'
               width={350}
               height={390}
-              className='banne ' />
+              className='banne '
+            />
             <Link to='/authentication/register'>
               <button
                 className="font-medium text-2xl mt-4 border rounded-lg p-2 "
