@@ -6,6 +6,7 @@ import './RegisterPageDr.css'
 import teleclinixlogo from '../../../assets/teleclinixlogo.svg'
 import banner from '../../../assets/banner-doctor.svg'
 
+
 const RegisterPageDr = () => {
   const [isWhiteBackground, setIsWhiteBackground] = useState(false);
   const [popupVisible, setPopupVisible] = useState(false);
